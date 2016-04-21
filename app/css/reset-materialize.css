@@ -1,0 +1,22 @@
+
+
+nav {
+  background-color: #000;
+  line-height: 60px;
+}
+
+nav .brand-logo {
+  font-family: 'Rozha One', serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+nav.wrapper {
+
+}
+nav ul li {
+  font-size: 0.91rem;
+}
+nav ul li a {
+  padding-left: 0;
+  font-size: 0.85rem;
+}

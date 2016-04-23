@@ -5,10 +5,19 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-a:hover {
-  color: #95a45f;
-  border-bottom: 5px solid #95a45f;
-  transition: all 100ms;
+h2 {
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+h4 {
+  font-size: 1.7rem;
+  font-weight: bold;
+  letter-spacing: 0.8px;
+}
+p {
+  font-size: 1.3rem;
+  line-height: 1.2;
 }
 
 
@@ -19,8 +28,20 @@ span.bold {
 .container {
   width: 42%;
 }
+.picture-container {
+  width: 49%;
+  margin: 0 auto;
+}
 
 /*  header  */
+
+/* nav  */
+
+header a:hover {
+  color: #95a45f;
+  border-bottom: 5px solid #95a45f;
+  transition: all 100ms;
+}
 
 header .background {
   height: 435px;
@@ -47,11 +68,10 @@ header .arrow {
   width: 60px;
   margin: 0 auto;
   margin-top: 25px;
+  cursor: pointer;
 }
 header .botanica {
   padding-top: 22px;
-  font-size: 1.3rem;
-  line-height: 1.2;
 }
 header .botanica h3 {
   font-size: 2.8rem;
@@ -64,10 +84,6 @@ header .botanica ul li {
   text-transform: uppercase;
   padding-top: 126px;
 }
-header .botanica .picture {
-  width: 49%;
-  margin: 0 auto;
-}
 
 /*  Kino botanica  */
 
@@ -79,7 +95,148 @@ header .botanica .picture {
   height: 582px;
 }
 .kino-botanica h2 {
-  font-weight: bold;
   padding-top: 30px;
   color: #fff;
+}
+.kino-botanica .video-screen {
+  width: 36%;
+  height: 420px;
+  margin: 0 auto;
+  margin-top: 25px;
+  border: 20px solid #000;
+
+}
+
+/*  nasha ija  */
+
+.nasha-ija {
+  background-color: rgba(255, 0, 0, 0.1);
+  font-size: 1.3rem;
+  line-height: 1.2;
+  padding-bottom: 50px;
+}
+
+.nasha-ija h2 {
+  padding-top: 40px;
+}
+.nasha-ija .container-tabs {
+  width: 45%;
+  margin: 30px auto;
+  margin-bottom: 0;
+  background-color: #fff;
+  position: relative;
+}
+.nasha-ija .container-tab-content {
+  width: 81%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.nasha-ija .tab-content h4 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 32px;
+}
+.nasha-ija .container-tabs .arr-left {
+  position: absolute;
+  top: 61%;
+  left: 1%;
+  z-index: 10;
+  cursor: pointer;
+}
+.nasha-ija .container-tabs .arr-right {
+  position: absolute;
+  top: 61%;
+  right: 0%;
+  z-index: 10;
+  cursor: pointer;
+}
+
+/*   kava break  */
+
+.kava-break {
+  text-align: center;
+  position: relative;
+}
+.kava-break h2 {
+  padding-top: 23px;
+}
+.kava-break .kava-break-container {
+  width: 65%;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+.control .arr-left {
+  position: absolute;
+  top: 59%;
+  left: 17%;
+  z-index: 10;
+  cursor: pointer;
+}
+.control .arr-right {
+  position: absolute;
+  top: 59%;
+  right: 16.5%;
+  z-index: 10;
+  cursor: pointer;
+}
+
+/*  snidanok  */
+
+.snidanok {
+  position: relative;
+}
+.snidanok .kava-break-container {
+  width: 65%;
+  margin: 0 auto;
+}
+
+/*  furshet  */
+
+.furshet {
+  background-color: rgba(255, 0, 0, 0.1);
+  font-size: 1.3rem;
+  line-height: 1.2;
+  padding-bottom: 60px;
+  margin-top: -16px;
+}
+
+.furshet h2 {
+  padding-top: 45px;
+}
+.furshet .container-tabs {
+  width: 45%;
+  margin: 30px auto;
+  margin-bottom: 0;
+  background-color: #fff;
+  position: relative;
+}
+.furshet .container-tab-content {
+  width: 81%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.furshet .tab-content h4 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 32px;
+}
+.furshet .container-tabs .arr-left {
+  position: absolute;
+  top: 61%;
+  left: 1%;
+  z-index: 10;
+  cursor: pointer;
+}
+.furshet .container-tabs .arr-right {
+  position: absolute;
+  top: 61%;
+  right: 0%;
+  z-index: 10;
+  cursor: pointer;
+}
+
+/* zamovlenna  */
+
+.zamovlenna h2 {
+  padding-top: 26px;
 }

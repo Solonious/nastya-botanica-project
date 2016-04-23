@@ -1,0 +1,10 @@
+
+/*  resize slider windows  */
+
+.owl-carousel .owl-stage-outer {
+  height: 525px;
+
+}
+.owl-carousel .owl-item img {
+  height: 510px;
+}

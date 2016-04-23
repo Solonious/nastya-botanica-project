@@ -16,7 +16,7 @@ gulp.task('connect', function() {
     livereload: true,
     port: 8000
   });
-  opn('http://localhost:8000', {app: 'firefox'});
+  opn('http://localhost:8000');
 });
 
 //html

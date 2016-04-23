@@ -8,12 +8,17 @@
   <!--Import Google Icon Font-->
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Rozha+One' rel='stylesheet' type='text/css'>
+
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
   <!-- responsive css -->
   <link rel="stylesheet" href="/css/responsive.css" media="screen" title="no title" charset="utf-8">
   <!-- reset materialize -->
   <link rel="stylesheet" href="/css/reset-materialize.css" media="screen" title="no title" charset="utf-8">
+  <!-- owl.carousel -->
+  <link rel="stylesheet" href="/css/owl.carousel.css">
+  <!-- owl.carousel default settings -->
+  <link rel="stylesheet" href="/css/owl.carousel-default.css" media="screen" title="no title" charset="utf-8">
   <!-- main style -->
   <link rel="stylesheet" href="/css/style.css" media="screen" title="no title" charset="utf-8">
 </head>
@@ -72,7 +77,7 @@
               <section class="text-block">
                 <h6>Ми нагодували вже понад</h6>
                 <div id="counter">11700</div>
-                <p>гостей різноманітних заходів</p>
+                <h6>гостей різноманітних заходів</h6>
               </section>
               <!-- arrow down -->
               <div class="arrow arrow-dwn">
@@ -90,7 +95,7 @@
               <h3><span class="bold">BOTANICA</span> - це комплексний, корисний якісний та зручний бізнес кейтеринг.</h1>
               <p>Ми довго та шз задоволенням створювали їжу finger food яку легко та зручно їсти руками. Ми додаємо смак спілкуванню.</p>
             </div>
-              <ul class="picture">
+              <ul class="picture-container">
                 <li>семінари<br> & тренінги</li>
                 <li>офіси<br> & hub</li>
                 <li>конференції<br> & різні заходи</li>
@@ -102,17 +107,224 @@
   <!-- kino-botanica -->
   <section class="kino-botanica">
     <h2>кіно-botanica</h2>
+    <div class="video-screen"></div>
   </section>
   <!-- nasha ija -->
-  <section></section>
+  <section class="nasha-ija">
+    <div class="container">
+      <h2>наша їжа</h2>
+      <p>Ми прагнемо щоб їжа була поживна та водночас корисна і тому додаємо в соуси інгредієнти категорії суперфуд. Також, ми використовуємо фермерські мясо та сири і доповнюємо меню сезонними овочами та фруктами.</p>
+    </div>
+      <!-- tabs -->
+      <div class="container-tabs">
+          <ul class="tabs">
+            <li class="tab"><a class="active" href="#tab-1">сендвічі</a></li>
+            <li class="tab"><a href="#tab-2">супи</a></li>
+            <li class="tab"><a href="#tab-3">салати</a></li>
+            <li class="tab"><a href="#tab-4">десерти</a></li>
+            <li class="tab"><a href="#tab-5">пиріжки</a></li>
+            <li class="tab"><a style="border-color: transparent" href="#tab-6">суперфуд</a></li>
+          </ul>
+        <!-- sanswich -->
+        <div class="container-tab-content">
+          <div id="tab-1" class="tab-content col s12">
+            <h4 class="align-center">сендвічі & вега сендвічі</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, eos, tempora. Reiciendis, beatae! Sapiente eligendi minus neque voluptates officia ipsa voluptate, expedita vero facere molestiae.</p>
+          </div>
+          <div id="tab-2" class="tab-content col s12">Test 2</div>
+          <div id="tab-3" class="tab-content col s12">Test 3</div>
+          <div id="tab-4" class="tab-content col s12">Test 4</div>
+          <div id="tab-5" class="tab-content col s12">Test 4</div>
+          <div id="tab-6" class="tab-content col s12">Test 4</div>
+        </div>
+        <!-- slider -->
+        <div class="slider">
+          <ul class="slides">
+            <li>
+              <img src="http://lorempixel.com/580/250/nature/1"> <!-- random image -->
+            </li>
+            <li>
+              <img src="http://lorempixel.com/580/250/nature/2"> <!-- random image -->
+            </li>
+            <li>
+              <img src="http://lorempixel.com/580/250/nature/3"> <!-- random image -->
+            </li>
+            <li>
+              <img src="http://lorempixel.com/580/250/nature/4"> <!-- random image -->
+            </li>
+          </ul>
+        </div>
+        <!-- slides button left -->
+        <div class="arr-left">
+          <?xml version="1.0" standalone="no"?>
+            <svg width="70" height="70" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="10" width="42" height="42" fill="transparent" stroke="white" stroke-width="3"/>
+              <polyline points="20 25 31 38 42 25 42 28 31 40 20 28 20 25 31 38" transform="rotate(90 30 30)" stroke-width="2" stroke="white" fill="white"/>
+            </svg>
+        </div>
+        <!-- slides button right -->
+        <div class="arr-right">
+          <?xml version="1.0" standalone="no"?>
+            <svg width="70" height="70" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="10" width="42" height="42" fill="transparent" stroke="white" stroke-width="3"/>
+              <polyline points="20 25 31 38 42 25 42 28 31 40 20 28 20 25 31 38" transform="rotate(270 30 30)" stroke-width="2" stroke="white" fill="white"/>
+            </svg>
+        </div>
+    </div>
+  </section>
   <!-- kava break -->
-  <section></section>
+  <section class="kava-break">
+    <div class="container">
+      <h2>кава брейк</h2>
+      <p>Найголовніше в кожному заході - це кава-брейк</p>
+    </div>
+    <!-- owl carousel -->
+    <div class="kava-break-container">
+      <div class="owl-carousel">
+        <div class="item"><img src="http://lorempixel.com/580/250/nature/2"></div>
+        <div class="item"><img src="http://lorempixel.com/580/250/nature/4"></div>
+        <div class="item"><img src="http://lorempixel.com/580/250/nature/2"></div>
+      </div>
+      <div class="control">
+        <!-- slides button right -->
+        <div class="arr-left">
+          <?xml version="1.0" standalone="no"?>
+            <svg width="70" height="70" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="10" width="42" height="42" fill="transparent" stroke="white" stroke-width="3"/>
+              <polyline points="20 25 31 38 42 25 42 28 31 40 20 28 20 25 31 38" transform="rotate(90 30 30)" stroke-width="2" stroke="white" fill="white"/>
+            </svg>
+        </div>
+        <!-- slides button right -->
+        <div class="arr-right">
+          <?xml version="1.0" standalone="no"?>
+            <svg width="70" height="70" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="10" width="42" height="42" fill="transparent" stroke="white" stroke-width="3"/>
+              <polyline points="20 25 31 38 42 25 42 28 31 40 20 28 20 25 31 38" transform="rotate(270 30 30)" stroke-width="2" stroke="white" fill="white"/>
+            </svg>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- snidanok launch -->
-  <section></section>
+  <section class="snidanok">
+    <div class="container">
+      <h2>сніданок / ланч</h2>
+      <p>Для вашого заходу ми швидко складемо меню на сніданок та ланч. А також, ми розробили BOTANICA box, які дуже зручні для організації харчування різних заходів. Різна комбінація наповнення боксу дає можливість задовольнити будь-якій бюджет.</p>
+    </div>
+    <!-- owl carousel -->
+    <div class="kava-break-container">
+      <div class="owl-carousel">
+        <div class="item"><img src="http://lorempixel.com/580/250/nature/2"></div>
+        <div class="item"><img src="http://lorempixel.com/580/250/nature/4"></div>
+        <div class="item"><img src="http://lorempixel.com/580/250/nature/2"></div>
+      </div>
+      <div class="control">
+        <!-- slides button right -->
+        <div class="arr-left">
+          <?xml version="1.0" standalone="no"?>
+            <svg width="70" height="70" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="10" width="42" height="42" fill="transparent" stroke="white" stroke-width="3"/>
+              <polyline points="20 25 31 38 42 25 42 28 31 40 20 28 20 25 31 38" transform="rotate(90 30 30)" stroke-width="2" stroke="white" fill="white"/>
+            </svg>
+        </div>
+        <!-- slides button right -->
+        <div class="arr-right">
+          <?xml version="1.0" standalone="no"?>
+            <svg width="70" height="70" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="10" width="42" height="42" fill="transparent" stroke="white" stroke-width="3"/>
+              <polyline points="20 25 31 38 42 25 42 28 31 40 20 28 20 25 31 38" transform="rotate(270 30 30)" stroke-width="2" stroke="white" fill="white"/>
+            </svg>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- furshet -->
-  <section></section>
+  <section class="furshet">
+    <div class="container">
+      <h2>фуршет</h2>
+      <p>Ми по-новому підійшли до організації фуршетів та створили для Вас фірмові фуршети з використанням різних декорів та концепцій.</p>
+    </div>
+      <!-- tabs -->
+      <div class="container-tabs">
+          <ul class="tabs">
+            <li class="tab"><a class="active" href="#furshet-tab-1">botanica фуршет</a></li>
+            <li class="tab"><a href="#furshet-tab-2">сендвіч фуршет</a></li>
+            <li class="tab"><a href="#furshet-tab-3">furshet box</a></li>
+            <li class="tab"><a href="#furshet-tab-4" style="border-color: transparent">брендовий фуршет</a></li>
+          </ul>
+        <!-- article -->
+        <div class="container-tab-content">
+          <div id="furshet-tab-1" class="tab-content col s12">
+            <h4 class="align-center">botanica фуршет</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, eos, tempora. Reiciendis, beatae! Sapiente eligendi minus neque voluptates officia ipsa voluptate, expedita vero facere molestiae.</p>
+          </div>
+          <div id="furshet-tab-2" class="tab-content col s12">Test 2</div>
+          <div id="furshet-tab-3" class="tab-content col s12">Test 3</div>
+          <div id="furshet-tab-4" class="tab-content col s12">Test 4</div>
+        </div>
+        <!-- slider -->
+        <div class="slider">
+          <ul class="slides">
+            <li><img src="http://lorempixel.com/580/250/nature/1"></li><!-- random image -->
+            <li><img src="http://lorempixel.com/580/250/nature/2"></li><!-- random image -->
+            <li><img src="http://lorempixel.com/580/250/nature/3"></li><!-- random image -->
+            <li><img src="http://lorempixel.com/580/250/nature/4"></li><!-- random image -->
+          </ul>
+        </div>
+        <!-- slides button left -->
+        <div class="arr-left">
+          <?xml version="1.0" standalone="no"?>
+            <svg width="70" height="70" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="10" width="42" height="42" fill="transparent" stroke="white" stroke-width="3"/>
+              <polyline points="20 25 31 38 42 25 42 28 31 40 20 28 20 25 31 38" transform="rotate(90 30 30)" stroke-width="2" stroke="white" fill="white"/>
+            </svg>
+        </div>
+        <!-- slides button right -->
+        <div class="arr-right">
+          <?xml version="1.0" standalone="no"?>
+            <svg width="70" height="70" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="10" width="42" height="42" fill="transparent" stroke="white" stroke-width="3"/>
+              <polyline points="20 25 31 38 42 25 42 28 31 40 20 28 20 25 31 38" transform="rotate(270 30 30)" stroke-width="2" stroke="white" fill="white"/>
+            </svg>
+        </div>
+    </div>
+  </section>
   <!-- zamovlenna -->
-  <section></section>
+  <section class="zamovlenna">
+    <div class="container">
+      <h2>замовлення</h2>
+      <p>Залиште заявку зараз. Ми передзвонимо Вам, щоб уточнити деталі, після чого підготуємо детальний індивідуальний прорахунок(1-2 години у робочий час).</p>
+      <p>Ви отримаєте кращу пропозицію, в рамках бюджету.</p>
+    </div>
+    <!-- order form -->
+    <form action="">
+      <div class="container">
+        <input class="left" type="text" name="name" value="" placeholder="ім'я">
+        <input class="right" type="text" name="name" value="" placeholder="компанія">
+        <div class="clearfix"></div>
+        <input class="left"type="text" name="name" value="" placeholder="телефон">
+        <input class="right"type="text" name="name" value="" placeholder="кількість персон">
+        <div class="clearfix"></div>
+        <input class="left"type="text" name="name" value="" placeholder="e-mail">
+        <div class="right check-boxes">
+          <p>
+            <label for="test5">Red</label>
+            <input type="checkbox" id="test5" />
+          </p>
+          <p>
+            <input type="checkbox" id="test5" />
+            <label for="test5">Red</label>
+          </p>
+          <p>
+            <input type="checkbox" id="test5" />
+            <label for="test5">Red</label>
+          </p>
+        </div>
+        <div class="clearfix"></div>
+        <textarea name="name" rows="8" cols="40"></textarea>
+      </div>
+    </form>
+  </section>
   <!-- gallery -->
   <section></section>
   <!-- about us -->
@@ -123,6 +335,10 @@
   <footer></footer>
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <!-- carousel -->
+  <script type="text/javascript" src="/js/owl.carousel.min.js">
+
+  </script>
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
   <script src="/js/main.js" type="text/javascript"></script>

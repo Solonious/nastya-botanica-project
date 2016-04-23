@@ -20,3 +20,62 @@ nav ul li a {
   padding-left: 0;
   font-size: 0.85rem;
 }
+
+/*  tabs  */
+
+.tabs {
+  font-size: 0.95rem;
+  border-bottom: 1px solid #000;
+  width: 92% !important;
+  border-color: rgba(163, 151, 151, 0.3);;
+}
+.tabs .tab a {
+  border-right: 1px solid #95a45f;
+  line-height: 1;
+  margin-top: 18px;
+  height: 12px;
+  color: #000;
+}
+.tabs .tab a:hover {
+  color: #95a45f;
+}
+.tabs .indicator {
+  background-color: transparent;
+}
+
+/*  slider  */
+
+.slider {
+  width: 95%;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+/*  form  */
+
+form {
+  background-color: rgba(255, 0, 0, 0.35);
+  padding-top: 56px;
+  margin-top: 30px;
+}
+
+form input[type=text] {
+  width: 46%;
+  border: 1px solid #fff;
+  background-color: #fff;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  padding-left: 12px;
+}
+form input[type]:focus:not([readonly]) {
+  border: 1px solid #000;
+  box-shadow: 0 0 0 0 #000;
+}
+form .check-boxes {
+  width: 48%;
+  border: 1px solid #fff;
+  background-color: #fff;
+}
+form .check-boxes p {
+  float: left;
+}

@@ -8,3 +8,20 @@
 .owl-carousel .owl-item img {
   height: 510px;
 }
+
+/*  resize gallery-container  */
+
+.gallery .owl-carousel .owl-stage-outer {
+  height: 770px;
+
+}
+.gallery .owl-carousel .owl-item img {
+  height: 510px;
+}
+
+/*  resize our stannds gallery-container  */
+
+.our-stands .owl-carousel .owl-stage-outer {
+  height: 800px;
+
+}

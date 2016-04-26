@@ -11,7 +11,8 @@ nav .brand-logo {
   font-weight: bold;
 }
 nav.wrapper {
-
+  width: 80%;
+  margin: 0 auto;
 }
 nav ul li {
   font-size: 0.91rem;
@@ -52,15 +53,23 @@ nav ul li a {
 }
 
 /*  form  */
+.form-container {
+  width: 75%;
+  max-width: 780px;
+  min-width: 770px;
+  margin: 0 auto;
+}
 
 form {
   background-color: rgba(255, 0, 0, 0.35);
   padding-top: 56px;
   margin-top: 30px;
+  text-align: center;
 }
 
 form input[type=text] {
   width: 46%;
+  min-width: 356px;
   border: 1px solid #fff;
   background-color: #fff;
   margin-bottom: 24px;
@@ -73,9 +82,42 @@ form input[type]:focus:not([readonly]) {
 }
 form .check-boxes {
   width: 48%;
+  min-width: 356px;
   border: 1px solid #fff;
   background-color: #fff;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  padding-top: 5px;
+  padding-bottom: 9px;
+  padding-left: 1em;
 }
-form .check-boxes p {
-  float: left;
+label {
+  font-size: 1rem;
+  padding-right: 0.5em;
+  color: #000;
+}
+[type="checkbox"]+label:before, [type="checkbox"]:not(.filled-in)+label:after {
+  width: 70%;
+  height: 2em;
+}
+textarea {
+  background-color: #fff;
+  height: 100px;
+  text-transform: uppercase;
+  padding: 12px;
+}
+
+button {
+  font-size: 2rem;
+  margin-top: 38px;
+  margin-bottom: 75px;
+  padding: 2px 20px;
+  border: 3px solid #fff;
+  background: transparent;
+  color: #fff;
+}
+button:hover {
+  background-color: #fff;
+  color: rgba(255, 0, 0, 0.35);
+  transition: all 500ms;
 }

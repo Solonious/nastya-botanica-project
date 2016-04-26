@@ -52,4 +52,22 @@ $(document).ready(function(){
     // Parameters has to be in square bracket '[]'
     owl.trigger('prev.owl.carousel', [300]);
   })
+  // gallery
+  $('.gallery .owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:false,
+    items:1,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
+    }
+})
 });

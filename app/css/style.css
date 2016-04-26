@@ -1,9 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
 }
 h2 {
   text-align: center;
@@ -14,6 +11,7 @@ h4 {
   font-size: 1.7rem;
   font-weight: bold;
   letter-spacing: 0.8px;
+  text-transform: uppercase;
 }
 p {
   font-size: 1.3rem;
@@ -26,16 +24,25 @@ span.bold {
 }
 
 .container {
+  max-width: 1100px;
   width: 42%;
+
 }
 .picture-container {
-  width: 49%;
+  width: 55%;
+  max-width: 860px;
+  min-width: 450px;
   margin: 0 auto;
 }
 
 /*  header  */
 
 /* nav  */
+.container-nav {
+  width: 80%;
+  max-width: 765px;
+  margin: 0 auto;
+}
 
 header a:hover {
   color: #95a45f;
@@ -73,6 +80,11 @@ header .arrow {
 header .botanica {
   padding-top: 22px;
 }
+header .botanica-container {
+  width: 71%;
+  max-width: 775px;
+  margin: 0 auto;
+}
 header .botanica h3 {
   font-size: 2.8rem;
   letter-spacing: 0.245px;
@@ -99,7 +111,9 @@ header .botanica ul li {
   color: #fff;
 }
 .kino-botanica .video-screen {
-  width: 36%;
+  width: 45%;
+  max-width: 720px;
+  min-width: 500px;
   height: 420px;
   margin: 0 auto;
   margin-top: 25px;
@@ -115,12 +129,19 @@ header .botanica ul li {
   line-height: 1.2;
   padding-bottom: 50px;
 }
+.nasha-ija-container {
+  width: 71%;
+  max-width: 775px;
+  margin: 0 auto;
+}
 
 .nasha-ija h2 {
   padding-top: 40px;
 }
 .nasha-ija .container-tabs {
-  width: 45%;
+  width: 75%;
+  max-width: 770px;
+  min-width: 500px;
   margin: 30px auto;
   margin-bottom: 0;
   background-color: #fff;
@@ -155,27 +176,34 @@ header .botanica ul li {
 
 .kava-break {
   text-align: center;
-  position: relative;
+}
+.kava-break .kava-container {
+  width: 71%;
+  max-width: 775px;
+  margin: 0 auto;
 }
 .kava-break h2 {
   padding-top: 23px;
 }
 .kava-break .kava-break-container {
-  width: 65%;
+  width: 75%;
+  max-width: 770px;
+  min-width: 500px;
   margin: 0 auto;
   margin-top: 40px;
+  position: relative;
 }
-.control .arr-left {
+.kava-break .kava-break-container .arr-left {
   position: absolute;
-  top: 59%;
-  left: 17%;
+  top: 35%;
+  left: -2%;
   z-index: 10;
   cursor: pointer;
 }
-.control .arr-right {
+.kava-break .kava-break-container .arr-right {
   position: absolute;
-  top: 59%;
-  right: 16.5%;
+  top: 35%;
+  right: -3%;
   z-index: 10;
   cursor: pointer;
 }
@@ -183,11 +211,33 @@ header .botanica ul li {
 /*  snidanok  */
 
 .snidanok {
-  position: relative;
+
+}
+.snidanok .snidanok-container {
+  width: 71%;
+  max-width: 775px;
+  margin: 0 auto;
 }
 .snidanok .kava-break-container {
-  width: 65%;
+  width: 75%;
+  max-width: 770px;
+  min-width: 500px;
   margin: 0 auto;
+  position: relative;
+}
+.snidanok .kava-break-container .arr-left {
+  position: absolute;
+  top: 35%;
+  left: -2%;
+  z-index: 10;
+  cursor: pointer;
+}
+.snidanok .kava-break-container .arr-right {
+  position: absolute;
+  top: 35%;
+  right: -3%;
+  z-index: 10;
+  cursor: pointer;
 }
 
 /*  furshet  */
@@ -199,12 +249,19 @@ header .botanica ul li {
   padding-bottom: 60px;
   margin-top: -16px;
 }
+.furshet .furshet-container {
+  width: 71%;
+  max-width: 775px;
+  margin: 0 auto;
+}
 
 .furshet h2 {
   padding-top: 45px;
 }
 .furshet .container-tabs {
-  width: 45%;
+  width: 75%;
+  max-width: 770px;
+  min-width: 500px;
   margin: 30px auto;
   margin-bottom: 0;
   background-color: #fff;
@@ -236,7 +293,168 @@ header .botanica ul li {
 }
 
 /* zamovlenna  */
-
+.zamovlenna-container {
+  width: 71%;
+  max-width: 775px;
+  margin: 0 auto;
+}
 .zamovlenna h2 {
   padding-top: 26px;
+}
+
+/*  gallery  */
+
+.gallery .gallery-container {
+  width: 66%;
+  margin: 0 auto;
+  position: relative;
+
+}
+.gallery .slider .slides {
+  background-color: #fff;
+}
+
+.gallery h2 {
+  padding-top: 8px;
+}
+.gallery button {
+  width: 100%;
+  background: #000;
+  padding-top: 65px;
+  padding-bottom: 52px;
+  margin-top: 0;
+  margin-bottom: 23px;
+  text-transform: uppercase;
+}
+.gallery button:hover {
+  background: #fff;
+  border: 3px solid #000;
+  color: #000;
+  font-weight: bold;
+}
+.gallery .gallery-container .arr-left {
+  position: absolute;
+  left: 0%;
+  top: 43%;
+  z-index: 100;
+}
+.gallery .gallery-container .arr-right {
+  position: absolute;
+  right: 0%;
+  top: 43%;
+}
+
+/*  about us  */
+
+.about-us {
+  background: rgba(255, 0, 0, 0.12);
+  padding-bottom: 40px;
+}
+.about-us .about-us-container {
+  width: 55%;
+  max-width: 750px;
+  min-width: 663px;
+  margin: 0 auto;
+  position: relative;
+}
+.about-us h2 {
+  padding-top: 45px;
+}
+.about-us .about-us-container .arr-left {
+  top: 50%;
+  left: 1%;
+  position: absolute;
+}
+.about-us .about-us-container .arr-right {
+  position: absolute;
+  right: 0%;
+  top: 50%;
+}
+.about-us .slider .slides {
+  background: #fff;
+  position: relative;
+}
+.about-us .slider .slides li img {
+  width: 142px;
+  height: 142px;
+  border: 1px solid #000;
+  margin-right: 22px;
+}
+.about-us .about-info {
+  width: 80%;
+  margin: 115px auto;
+}
+.about-us .about-info-text h5 {
+  line-height: 78%;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+.about-us .about-info p {
+  font-size: 1rem;
+}
+
+/*  our stands  */
+
+.our-stands {
+  text-align: center;
+  padding-top: 12px;
+}
+.our-stands .gallery-container {
+  position: relative;
+}
+.our-stands .gallery-block h4 {
+  line-height: 0.5;
+}
+.our-stands .gallery-block p {
+  line-height: 0.5;
+}
+.our-stands .gallery-block .img-line img {
+  width: 245px;
+  height: 160px;
+  border: 1px solid #000;
+  float: left;
+  margin-left: 20px;
+}
+.our-stands .control .arr-left {
+  position: absolute;
+  top: 42%;
+  left: 0;
+}
+.our-stands .control .arr-right {
+  position: absolute;
+  top: 42%;
+  right: 0;
+}
+
+/*  footer  */
+
+footer {
+  background: rgba(0, 255, 0, 0.5);
+  padding-top: 10px;
+  margin-top: 23px;
+  padding-bottom: 30px;
+}
+footer .footer-container {
+  width: 50%;
+  min-width: 653px;
+  margin: 35px auto;
+  background: #fff;
+}
+footer .footer-container p {
+  padding: 35px 105px;
+  margin-bottom: 0;
+  padding-bottom: 25px;
+}
+footer .social-link {
+  width: 100%;
+  margin: 0 auto;
+}
+footer .social-link .link {
+  float: left;
+  padding-left: 54px;
+  font-size: 1.3rem;
+}
+footer h3 {
+  text-transform: uppercase;
+  text-align: center;
 }

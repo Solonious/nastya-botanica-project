@@ -28,7 +28,7 @@
       <!-- navigation -->
       <nav>
         <div class="nav-wrapper">
-          <div class="container">
+          <div class="container-nav">
             <a href="#" class="brand-logo">BOTANICA</a>
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
@@ -91,7 +91,7 @@
           </div>
           <!-- botanica -->
           <section class="botanica">
-            <div class="container">
+            <div class="botanica-container">
               <h3><span class="bold">BOTANICA</span> - це комплексний, корисний якісний та зручний бізнес кейтеринг.</h1>
               <p>Ми довго та шз задоволенням створювали їжу finger food яку легко та зручно їсти руками. Ми додаємо смак спілкуванню.</p>
             </div>
@@ -111,7 +111,7 @@
   </section>
   <!-- nasha ija -->
   <section class="nasha-ija">
-    <div class="container">
+    <div class="nasha-ija-container">
       <h2>наша їжа</h2>
       <p>Ми прагнемо щоб їжа була поживна та водночас корисна і тому додаємо в соуси інгредієнти категорії суперфуд. Також, ми використовуємо фермерські мясо та сири і доповнюємо меню сезонними овочами та фруктами.</p>
     </div>
@@ -140,18 +140,10 @@
         <!-- slider -->
         <div class="slider">
           <ul class="slides">
-            <li>
-              <img src="http://lorempixel.com/580/250/nature/1"> <!-- random image -->
-            </li>
-            <li>
-              <img src="http://lorempixel.com/580/250/nature/2"> <!-- random image -->
-            </li>
-            <li>
-              <img src="http://lorempixel.com/580/250/nature/3"> <!-- random image -->
-            </li>
-            <li>
-              <img src="http://lorempixel.com/580/250/nature/4"> <!-- random image -->
-            </li>
+            <li><img src="http://lorempixel.com/580/250/nature/1"></li><!-- random image -->
+            <li><img src="http://lorempixel.com/580/250/nature/2"></li><!-- random image -->
+            <li><img src="http://lorempixel.com/580/250/nature/3"></li><!-- random image -->
+            <li><img src="http://lorempixel.com/580/250/nature/4"></li><!-- random image -->
           </ul>
         </div>
         <!-- slides button left -->
@@ -174,7 +166,7 @@
   </section>
   <!-- kava break -->
   <section class="kava-break">
-    <div class="container">
+    <div class="kava-container">
       <h2>кава брейк</h2>
       <p>Найголовніше в кожному заході - це кава-брейк</p>
     </div>
@@ -207,7 +199,7 @@
   </section>
   <!-- snidanok launch -->
   <section class="snidanok">
-    <div class="container">
+    <div class="snidanok-container">
       <h2>сніданок / ланч</h2>
       <p>Для вашого заходу ми швидко складемо меню на сніданок та ланч. А також, ми розробили BOTANICA box, які дуже зручні для організації харчування різних заходів. Різна комбінація наповнення боксу дає можливість задовольнити будь-якій бюджет.</p>
     </div>
@@ -240,7 +232,7 @@
   </section>
   <!-- furshet -->
   <section class="furshet">
-    <div class="container">
+    <div class="furshet-container">
       <h2>фуршет</h2>
       <p>Ми по-новому підійшли до організації фуршетів та створили для Вас фірмові фуршети з використанням різних декорів та концепцій.</p>
     </div>
@@ -291,14 +283,14 @@
   </section>
   <!-- zamovlenna -->
   <section class="zamovlenna">
-    <div class="container">
+    <div class="zamovlenna-container">
       <h2>замовлення</h2>
       <p>Залиште заявку зараз. Ми передзвонимо Вам, щоб уточнити деталі, після чого підготуємо детальний індивідуальний прорахунок(1-2 години у робочий час).</p>
       <p>Ви отримаєте кращу пропозицію, в рамках бюджету.</p>
     </div>
     <!-- order form -->
     <form action="">
-      <div class="container">
+      <div class="form-container">
         <input class="left" type="text" name="name" value="" placeholder="ім'я">
         <input class="right" type="text" name="name" value="" placeholder="компанія">
         <div class="clearfix"></div>
@@ -307,32 +299,172 @@
         <div class="clearfix"></div>
         <input class="left"type="text" name="name" value="" placeholder="e-mail">
         <div class="right check-boxes">
-          <p>
-            <label for="test5">Red</label>
-            <input type="checkbox" id="test5" />
-          </p>
-          <p>
-            <input type="checkbox" id="test5" />
-            <label for="test5">Red</label>
-          </p>
-          <p>
-            <input type="checkbox" id="test5" />
-            <label for="test5">Red</label>
-          </p>
+            <label for="kava">кава-брейк</label>
+            <input type="checkbox" id="kava" />
+            <label for=""></label>
+            <label for="furs">фуршет</label>
+            <input type="checkbox" id="furs" />
+            <label for=""></label>
+            <label for="lunch">ланч</label>
+            <input type="checkbox" id="lunch" />
+            <label for=""></label>
         </div>
         <div class="clearfix"></div>
-        <textarea name="name" rows="8" cols="40"></textarea>
+        <textarea name="name" rows="10" cols="40" placeholder="побажання"></textarea>
       </div>
+      <button type="submit" name="button">замовити</button>
     </form>
   </section>
   <!-- gallery -->
-  <section></section>
+  <section class="gallery">
+    <div class="container">
+      <h2>галерея</h2>
+    </div>
+    <!-- gallery slider -->
+    <div class="gallery-container">
+      <div class="owl-carousel">
+        <div class="item">
+          <button>cisco фуршет</button>
+          <button>кмбш кава-брейк</button>
+          <button>люксофт ланч</button>
+          <button>холідей-ін ланч</button>
+        </div>
+      </div>
+      <!-- slides button right -->
+      <div class="arr-left">
+        <?xml version="1.0" standalone="no"?>
+          <svg width="70" height="70" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="10" width="42" height="42" fill="transparent" stroke="black" stroke-width="3"/>
+            <polyline points="20 25 31 38 42 25 42 28 31 40 20 28 20 25 31 38" transform="rotate(90 30 30)" stroke-width="2" stroke="black" fill="white"/>
+          </svg>
+      </div>
+      <!-- slides button right -->
+      <div class="arr-right">
+        <?xml version="1.0" standalone="no"?>
+          <svg width="70" height="70" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="10" width="42" height="42" fill="transparent" stroke="black" stroke-width="3"/>
+            <polyline points="20 25 31 38 42 25 42 28 31 40 20 28 20 25 31 38" transform="rotate(270 30 30)" stroke-width="2" stroke="black" fill="white"/>
+          </svg>
+      </div>
+    </div>
+  </section>
   <!-- about us -->
-  <section></section>
+  <section class="about-us">
+    <div class="about-us-container">
+      <h2>про нас пишуть</h2>
+      <!-- slider -->
+      <div class="slider">
+        <ul class="slides">
+          <!-- first slide -->
+          <li>
+            <div class="about-info">
+              <img class="left" src="" alt="img">
+              <div class="about-info-text">
+                <h5>дмитро коновалов</h5>
+                <h6>Manager HOLIDAY-INN</h6>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum suscipit fuga distinctio deleniti voluptatem, assumenda est commodi placeat! Consectetur deserunt unde vel reprehenderit illum numquam aliquid libero.</p>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </li><!-- random image -->
+          <!-- more slides . . . -->
+        </ul>
+      </div>
+      <!-- slides button left -->
+      <div class="arr-left">
+        <?xml version="1.0" standalone="no"?>
+          <svg width="70" height="70" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="10" width="42" height="42" fill="transparent" stroke="black" stroke-width="3"/>
+            <polyline points="20 25 31 38 42 25 42 28 31 40 20 28 20 25 31 38" transform="rotate(90 30 30)" stroke-width="2" stroke="black" fill="white"/>
+          </svg>
+      </div>
+      <!-- slides button right -->
+      <div class="arr-right">
+        <?xml version="1.0" standalone="no"?>
+          <svg width="70" height="70" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="10" width="42" height="42" fill="transparent" stroke="black" stroke-width="3"/>
+            <polyline points="20 25 31 38 42 25 42 28 31 40 20 28 20 25 31 38" transform="rotate(270 30 30)" stroke-width="2" stroke="black" fill="white"/>
+          </svg>
+      </div>
+    </div>
+  </section>
   <!-- our stands -->
-  <section></section>
+  <section class="our-stands">
+    <div class="container">
+      <h2>площадки</h2>
+      <p>Свої заходи ви можете спланувати на одній з локацій нашого міста.</p>
+    </div>
+    <!-- our stands lider -->
+    <div class="gallery-container">
+      <div class="owl-carousel">
+        <!-- first slide -->
+        <div class="item">
+          <div class="gallery-block">
+            <h4>счастье hub</h4>
+            <p>вул Саксаганського, 70а</p>
+            <div class="img-line">
+              <img src="" alt="">
+              <img src="" alt="">
+              <img src="" alt="">
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="gallery-block">
+            <h4>мистецький арсенал</h4>
+            <p>вул Лаврська, 10-12</p>
+            <div class="img-line">
+              <img src="" alt="">
+              <img src="" alt="">
+              <img src="" alt="">
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="gallery-block">
+            <h4>пінчукаартцентр</h4>
+            <p>вул Велика Васильківська/Басейна, 1/3-2</p>
+            <div class="img-line">
+              <img src="" alt="">
+              <img src="" alt="">
+              <img src="" alt="">
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+      <div class="control">
+        <!-- slides button right -->
+        <div class="arr-left">
+          <?xml version="1.0" standalone="no"?>
+            <svg width="70" height="70" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="10" width="42" height="42" fill="transparent" stroke="black" stroke-width="3"/>
+              <polyline points="20 25 31 38 42 25 42 28 31 40 20 28 20 25 31 38" transform="rotate(90 30 30)" stroke-width="2" stroke="black" fill="white"/>
+            </svg>
+        </div>
+        <!-- slides button right -->
+        <div class="arr-right">
+          <?xml version="1.0" standalone="no"?>
+            <svg width="70" height="70" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="10" width="42" height="42" fill="transparent" stroke="black" stroke-width="3"/>
+              <polyline points="20 25 31 38 42 25 42 28 31 40 20 28 20 25 31 38" transform="rotate(270 30 30)" stroke-width="2" stroke="black" fill="white"/>
+            </svg>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- contact -->
-  <footer></footer>
+  <footer>
+      <h2>контакти</h2>
+      <div class="footer-container">
+        <p>Тепер ви можете комплексно замовити корисний та зручний кейтерінг. Ви замовляете - ми готуємо, привозимо, годуємо :)</p>
+        <div class="social-link">
+          <div class="link">+38 098 009 00 00<br> <a href="">info@botanica.com.ua</a></div>
+          <div class="link"><a href="">fb.com/Botanica</a></div>
+          <div class="link"><a href="">instagram.com/Botanica</a></div>
+          <div class="clearfix"></div>
+        </div>
+        <h3>ми вирішили ваші проблеми!</h3>
+      </div>
+  </footer>
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <!-- carousel -->

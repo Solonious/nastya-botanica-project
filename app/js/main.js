@@ -17,6 +17,8 @@ $(document).ready(function(){
      btnRight.on('click', function() {
          $('.slider').slider('next');
      });
+     //  mobile navigation
+     $(".button-collapse").sideNav();
 });
 
 // tab control

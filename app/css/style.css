@@ -44,7 +44,7 @@ span.bold {
   margin: 0 auto;
 }
 
-header a:hover {
+header ul li a:hover {
   color: #95a45f;
   border-bottom: 5px solid #95a45f;
   transition: all 100ms;

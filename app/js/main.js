@@ -40,7 +40,7 @@ $(document).ready(function(){
               items:1.5
           }
       }
-  })
+  });
 
   var owl = $('.owl-carousel');
   owl.owlCarousel();
@@ -55,21 +55,5 @@ $(document).ready(function(){
     owl.trigger('prev.owl.carousel', [300]);
   })
   // gallery
-  $('.gallery .owl-carousel').owlCarousel({
-    loop:true,
-    margin:10,
-    nav:false,
-    items:1,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:1
-        },
-        1000:{
-            items:1
-        }
-    }
-})
+  
 });

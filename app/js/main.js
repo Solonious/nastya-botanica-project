@@ -30,13 +30,15 @@ $(document).ready(function(){
 //  owl carousel
 $(document).ready(function(){
   $('.owl-carousel').owlCarousel({
-      stagePadding:0,
       center:true,
       loop:true,
       margin:20,
       nav:false,
       responsive:{
           0:{
+              items:1
+          },
+          600:{
               items:1.5
           }
       }
@@ -55,5 +57,5 @@ $(document).ready(function(){
     owl.trigger('prev.owl.carousel', [300]);
   })
   // gallery
-  
+
 });

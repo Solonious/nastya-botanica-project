@@ -55,7 +55,7 @@ nav ul li a {
 
 /*  form  */
 .form-container {
-  width: 75%;
+  width: 100%;
   max-width: 780px;
   min-width: 770px;
   margin: 0 auto;

@@ -34,7 +34,7 @@
   }
 }
 
-@media all and (max-width: 414px) {
+@media all and (max-width: 440px) {
 
   h2 {
     font-size: 2rem;
@@ -45,13 +45,22 @@
   p {
     font-size: 1rem;
   }
+  .picture-container {
+    min-width: 100%;
+  }
   header .logo {
     padding-top: 100px;
   }
   header .botanica ul li {
-    min-width: 300px;
+    min-width: 100%;
     margin-bottom: 30px;
   }
+  .slider-min {
+    display: block;
+    width: 100%;
+  }
+  .snidanok .kava-break-container,
+  .kava-break .kava-break-container,
   footer .social-link a,
   .our-stands,
   .about-us,
@@ -122,25 +131,5 @@
   footer .social-link .mail a {
     font-size: 1rem;
 
-  }
-}
-
-@media all and (max-width: 415px) {
-
-  header .botanica ul li {
-    min-width: 420px;
-  }
-  footer .social-link a,
-  .our-stands,
-  .about-us,
-  .gallery,
-  .furshet .container-tabs,
-  .nasha-ija .container-tabs,
-  header .arrow,
-  header .text-block {
-    display: none;
-  }
-  .kino-botanica h2 {
-    left: 33%;
   }
 }

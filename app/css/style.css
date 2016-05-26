@@ -41,6 +41,9 @@ p {
   min-width: 450px;
   margin: 63px auto;
 }
+.slider-min {
+  display: none;
+}
 
 /*  header  */
 

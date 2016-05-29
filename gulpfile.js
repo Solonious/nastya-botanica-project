@@ -1,57 +1,137 @@
-var gulp = require('gulp');
-var connect = require('gulp-connect');
-var opn = require('opn');
-var useref = require('gulp-useref');
-var gulpif = require('gulp-if');
-var uglify = require('gulp-uglify');
-var minifyCss = require('gulp-minify-css');
+'use strict';
+
+const path = require('path');
+const del = require('del');
+const gulp = require('gulp');
+const gulplog = require('gulplog');
+const combine = require('stream-combiner2').obj;
+const throttle = require('lodash.throttle');
+const debug = require('gulp-debug');
+const sourcemaps = require('gulp-sourcemaps');
+//const stylus = require('gulp-stylus');
+const browserSync = require('browser-sync').create();
+const gulpIf = require('gulp-if');
+const cssnano = require('gulp-cssnano');
+const rev = require('gulp-rev');
+const revReplace = require('gulp-rev-replace');
+const plumber = require('gulp-plumber');
+const notify = require('gulp-notify');
+const uglify = require('gulp-uglify');
+const resolver = require('stylus').resolver;
+const cssfont64 = require('gulp-cssfont64');
+const imagemin = require('gulp-imagemin');
 
 
+// Gulp + Webpack = ♡
+/*
+const webpackStream = require('webpack-stream');
+const webpack = webpackStream.webpack;
+const named = require('vinyl-named');
+*/
+
+const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
+
+gulp.task('imagemin', () =>
+	gulp.src('frontend/styles/img/*.*')
+		.pipe(imagemin())
+		.pipe(gulp.dest('public/styles/img/'))
+);
 
 
-//Launch server
-gulp.task('connect', function() {
-  connect.server({
-    root: 'app',
-    livereload: true,
-    port: 8000
+gulp.task('styles', function() {
+
+  return gulp.src('frontend/styles/*.*')
+      .pipe(plumber({
+        errorHandler: notify.onError(err => ({
+          title:   'Styles',
+          message: err.message
+        }))
+      }))
+      .pipe(gulpIf(isDevelopment, sourcemaps.init()))
+      .pipe(gulpIf(isDevelopment, sourcemaps.write()))
+      .pipe(gulpIf(!isDevelopment, combine(cssnano(), rev())))
+      .pipe(gulp.dest('public/styles'))
+      .pipe(gulpIf(!isDevelopment, combine(rev.manifest('css.json'), gulp.dest('manifest'))));
+
+
+});
+
+gulp.task('assets', function() {
+  return gulp.src('frontend/assets/**/*.*', {since: gulp.lastRun('assets')})
+      .pipe(gulpIf(!isDevelopment, revReplace({
+        manifest: gulp.src('manifest/css.json', {allowEmpty: true})
+      })))
+      .pipe(gulp.dest('public'));
+});
+
+gulp.task('styles:assets', function() {
+  return gulp.src('frontend/styles/**/*.{svg,png,jpg}', {since: gulp.lastRun('styles:assets')})
+      .pipe(gulp.dest('public/styles'));
+});
+/*
+gulp.task('webpack', function() {
+
+  let options = {
+    watch:   isDevelopment,
+    devtool: isDevelopment ? 'cheap-module-inline-source-map' : null,
+    module:  {
+      loaders: [{
+        test:    /\.js$/,
+        include: path.join(__dirname, "frontend"),
+        loader:  'babel?presets[]=es2015'
+      }]
+    },
+    plugins: [
+      new webpack.NoErrorsPlugin()
+    ]
+  };
+
+  return gulp.src('frontend/js/*.js')
+      .pipe(plumber({
+        errorHandler: notify.onError(err => ({
+          title:   'Webpack',
+          message: err.message
+        }))
+      }))
+      .pipe(named())
+      .pipe(webpackStream(options))
+      .pipe(gulpIf(!isDevelopment, uglify()))
+      .pipe(gulp.dest('public/js'));
+
+});
+*/
+gulp.task('fonts', function () {
+	return gulp.src('frontend/fonts/*.woff')
+		.pipe(cssfont64())
+		.pipe(gulp.dest('public/styles/fonts'));
+});
+
+
+gulp.task('clean', function() {
+  return del(['public', 'manifest']);
+});
+
+gulp.task('build', gulp.series('clean', gulp.parallel('styles:assets', 'styles'), 'assets', 'fonts', 'imagemin'));
+
+gulp.task('serve', function() {
+  browserSync.init({
+    server: 'public'
   });
-  opn('http://localhost:8000');
+
+  browserSync.watch('public/**/*.*').on('change', browserSync.reload);
 });
 
-//html
-gulp.task('html', function () {
-  gulp.src('./app/*.html')
-    .pipe(connect.reload());
-});
 
-//css
-gulp.task('css', function () {
-  gulp.src('./app/css/*.css')
-    .pipe(connect.reload());
-});
-
-//js
-gulp.task('js', function () {
-  gulp.src('./app/js/*.js')
-    .pipe(connect.reload());
-});
-
-//watch
-gulp.task('watch', function () {
-  gulp.watch(['./app/*.html'], ['html']);
-  gulp.watch(['./app/css/*.css'], ['css']);
-  gulp.watch(['./app/js/*.js'], ['js']);
-});
-
-//build
-gulp.task('build', function() {
-	gulp.src('./app/*.html')
-  	.pipe(useref())
-    .pipe(gulpif('*.js', uglify()))
-    .pipe(gulpif('*.css', minifyCss()))
-    .pipe(gulp.dest('dist'));
-});
-
-//default
-gulp.task('default', ['connect', 'watch']);
+gulp.task('dev',
+    gulp.series(
+        'build',
+        gulp.parallel(
+            'serve',
+            function() {
+              gulp.watch('frontend/styles/**/*.css', gulp.series('styles'));
+              gulp.watch('frontend/assets/**/*.*', gulp.series('assets'));
+              gulp.watch('frontend/styles/**/*.{svg,png,jpg}', gulp.series('styles:assets'));
+            }
+        )
+    )
+);

@@ -237,6 +237,13 @@ header .botanica ul li {
   text-decoration: underline;
   color: #000;
 }
+.furshet .container-tabs .menu a:hover,
+.snidanok .snidanok-container .menu a:hover,
+.kava-break .kava-container .menu a:hover,
+.nasha-ija .container-tabs .vega a:hover,
+.nasha-ija .container-tabs .menu a:hover {
+  opacity: 0.7;
+}
 .nasha-ija .container-tabs .container-tab-content {
   width: 95%;
   height: 122px;

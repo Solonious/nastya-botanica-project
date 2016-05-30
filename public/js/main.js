@@ -1,5 +1,6 @@
+
 ;(() => {
-  var $count = $('#counter');
+  let $count = $('#counter');
 
 function countUp ( $el, startTime, callback) {
 
@@ -9,7 +10,7 @@ function countUp ( $el, startTime, callback) {
             console.log('Starting ...');
 
             // Start a 1 second timer
-            var timer = setInterval(countItUp,0.5);
+            let timer = setInterval(countItUp,0.5);
 
             // Decrement the displayed timer value on each 'tick'
             function countItUp(){

@@ -1,51 +1,52 @@
-::root {
-  --font-rozhaone-regular: 'RozhaOne-Regular', serif;
-}
+
 nav {
-  background-color: #000;
   line-height: 60px;
+  background-color: #000;
 }
 
 nav .brand-logo {
-  font-family: var(--font-rozhaone-regular);
+  font-family: 'RozhaOne-Regular', serif;
   font-size: 1.4rem;
   font-weight: bold;
 }
+
 nav.wrapper {
   width: 80%;
   margin: 0 auto;
 }
+
 nav ul li {
-  font-size: 0.91rem;
+  font-size: .91rem;
 }
+
 nav ul li a {
-  padding: 0;
-  font-size: 0.78rem;
+  font-size: .78rem;
   margin: 0 8px;
-}
-nav ul li:last-child {
-  padding-left: 20px;
+  padding: 0;
 }
 
 /*  tabs  */
 
 .tabs {
-  font-size: 0.95rem;
+  font-size: .95rem;
   font-weight: normal;
-  border-bottom: 1px solid #000;
   width: 92% !important;
-  border-color: rgba(163, 151, 151, 0.3);;
+  border-color: rgba(163, 151, 151, .3);
+  border-bottom: 1px solid #000;
 }
+
 .tabs .tab a {
-  border-right: 1px solid #95a45f;
   line-height: 1;
-  margin-top: 18px;
   height: 12px;
+  margin-top: 18px;
   color: #000;
+  border-right: 1px solid #95a45f;
 }
+
 .tabs .tab a:hover {
   color: #95a45f;
 }
+
 .tabs .indicator {
   background-color: transparent;
 }
@@ -59,71 +60,74 @@ nav ul li:last-child {
 }
 
 /*  form  */
+
 .form-container {
   width: 100%;
   max-width: 780px;
-  min-width: 770px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 form {
-  background: url(../styles/img/zamovlenna.jpg) no-repeat -37px -242px;
-  padding-top: 56px;
   margin-top: 53px;
+  padding-top: 56px;
   text-align: center;
+  background: url(../styles/img/zamovlenna.jpg) no-repeat -37px -242px;
 }
 
 form input[type=text] {
   width: 46%;
-  min-width: 356px;
+  margin-bottom: 24px;
+  padding-left: 12px;
+  text-transform: uppercase;
   border: 1px solid #fff;
   background-color: #fff;
-  margin-bottom: 24px;
-  text-transform: uppercase;
-  padding-left: 12px;
 }
+
 form input[type]:focus:not([readonly]) {
   border: 1px solid #000;
   box-shadow: 0 0 0 0 #000;
 }
+
 form .check-boxes {
+  font-size: .8rem;
   width: 48%;
-  min-width: 356px;
+  height: 44px;
+  padding-left: 5px;
+  text-transform: uppercase;
   border: 1px solid #fff;
   background-color: #fff;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  padding-top: 5px;
-  padding-bottom: 9px;
-  padding-left: 5px;
 }
+[type="checkbox"]+label {
+  padding-left: 22px;
+  margin-top: 10px;
+}
+
 label {
   font-size: 1rem;
-  padding-right: 0.5em;
+  padding-right: .5em;
   color: #000;
 }
-[type="checkbox"]+label:before, [type="checkbox"]:not(.filled-in)+label:after {
-  width: 70%;
-  height: 2em;
-}
+
 textarea {
-  background-color: #fff;
   height: 100px;
-  text-transform: uppercase;
   padding: 12px;
+  text-transform: uppercase;
+  background-color: #fff;
 }
 
 button {
   font-size: 2rem;
   margin-top: 38px;
   margin-bottom: 75px;
-  padding: 2px 20px;
+  padding: 13px 20px;
+  color: #fff;
   border: 3px solid #fff;
   background: transparent;
-  color: #fff;
 }
+
 button:hover {
-  background-color: #fff;
-  color: rgba(255, 0, 0, 0.35);
   transition: all 500ms;
+  color: rgba(255, 0, 0, .35);
+  background-color: #fff;
 }

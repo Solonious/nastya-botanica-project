@@ -1,140 +1,61 @@
-@media all and (max-width: 1200px) {
-  .our-stands .gallery-block .img-line .image {
-    width: 30%;
-    height: 100px%;
-  }
-}
-@media all and (max-width: 912px) {
-  .our-stands .gallery-block .img-line .image {
-    width: 28%;
-    height: 100px%;
-  }
-}
 
-
-@media all and (max-width: 800px) {
-  .form-container {
-    width: 30%;
-    min-width: 370px;
+@media all and (max-width: 750px) {
+  [type="checkbox"]+label {
+    padding-left: 20px;
+    margin-top: 10px;
+    font-size: 0.71rem;
   }
-  form .check-boxes {
-    min-width: 369px;
-    margin-bottom: 10px;
+  .gallery .gallery-container {
+    padding: 0 20px;
   }
-  .arr-left,
-  .arr-right {
+  .arrow {
+    display: none;
+  }
+  [type="checkbox"]+label:before, [type="checkbox"]:not(.filled-in)+label:after {
+    width: 16px;
+    height: 16px;
+  }
+  footer .social-link a {
     display: none;
   }
 }
 
-@media all and (max-width: 588px) {
+@media all and (max-width: 700px) {
+  .pdf-icon,
+  .arrow {
+    display: none;
+  }
+  .about-us .about-info .img-frame {
+    width: 80px;
+    height: 80px;
+  }
+  .about-us .about-info .img-frame:before {
+    top: -40%;
+    left: -90%;
+  }
   .our-stands .gallery-block .img-line .image {
-    width: 95%;
-    height: 100px%;
+    width: 27%;
+    height: 100px;
   }
 }
 
-@media all and (max-width: 440px) {
-
+@media all and (max-width: 345px) {
   h2 {
     font-size: 2rem;
   }
-  h3 {
+  .our-stands .gallery-block h3 {
     font-size: 1.5rem;
   }
-  p {
-    font-size: 1rem;
-  }
-  .picture-container {
-    min-width: 100%;
-  }
-  header .logo {
-    padding-top: 100px;
-  }
-  header .botanica ul li {
-    min-width: 100%;
-    margin-bottom: 30px;
-  }
-  .slider-min {
-    display: block;
-    width: 100%;
-  }
-  .snidanok .kava-break-container,
-  .kava-break .kava-break-container,
-  footer .social-link a,
-  .our-stands,
-  .about-us,
-  .gallery,
-  .furshet .container-tabs,
-  .nasha-ija .container-tabs,
-  header .arrow,
-  header .text-block {
-    display: none;
-  }
-  .kino-botanica {
-    height: 300px;
-  }
-  .kino-botanica h2 {
+  .about-us .about-info-text h5 {
     font-size: 1.5rem;
-    padding-top: 0;
-    color: #fff;
-    z-index: 100;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: -1%;
+    line-height: 100%;
   }
-  .kino-botanica .video-screen {
-    min-width: 300px;
-    height: 203px;
-    margin-top: 7px;
-    border: 5px solid #000;
-    left: -4px;
-  }
-  .form-container {
-    width: 30%;
-  }
-  form .form-container input {
+  .our-stands .gallery-block .img-line .image {
     width: 100%;
+    height: 100px;
   }
-  footer .footer-container,
-  .kava-break .kava-container,
-  .snidanok .snidanok-container {
-    max-width: 260px;
-    min-width: 0;
-    position: relative;
-  }
-  footer {
-    padding-bottom: 40px;
-  }
-  footer .footer-container>p {
-    padding: 20px 10px;
-  }
-  footer .social-link {
-    margin-bottom: 60px;
-  }
-  footer .social-link .fb {
-    background: url(../img/fb.jpg) 0px 0px no-repeat;
-    position: absolute;
-    top: 50%;
-    left: 28%;
-    width: 100%;
-    height: 100%;
-  }
-  footer .social-link .insta {
-    background: url(../img/insta.jpg) 0px 0px no-repeat;
-    position: absolute;
-    top: 50%;
-    left: 58%;
-    width: 100%;
-    height: 100%;
+  footer .social-link .mail {
+    opacity: 0;
   }
 
-  footer .footer-container h4 {
-    font-size: 1.2rem;
-  }
-  footer .social-link .mail a {
-    font-size: 1rem;
-
-  }
 }

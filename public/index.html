@@ -5,18 +5,24 @@
   <title>botanica</title>
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+  <!-- Fonts cash -->
   <script src="/js/font-loader.js"></script>
+  <!-- Reset CSS -->
+  <link rel="stylesheet" href="../styles/reset.css" media="screen" title="no title" charset="utf-8">
+  <!-- fancybox -->
+  <link rel="stylesheet" href="../styles/jquery.fancybox.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="../styles/jquery.fancybox-buttons.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="../styles/jquery.fancybox-thumbs.css" type="text/css" media="screen" />
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="../styles/materialize.min.css">
   <!-- reset materialize -->
-  <link rel="stylesheet" href="../styles/reset-materialize.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="../styles/reset-materialize.css" />
   <!-- owl.carousel -->
-  <link rel="stylesheet" href="../styles/owl.carousel.min.css">
+  <link rel="stylesheet" href="../styles/owl.carousel.min.css" />
   <!-- main style -->
-  <link rel="stylesheet" href="../styles/style.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="../styles/style.css" />
   <!-- responsive css -->
-  <link rel="stylesheet" href="../styles/responsive.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="../styles/responsive.css" />
 
 </head>
 <body>
@@ -29,7 +35,6 @@
           <div class="container-nav">
             <a href="#botanica_main" class="brand-logo">BOTANICA</a>
             <a href="#" data-activates="mobile-demo" class="button-collapse">
-              <?xml version="1.0" standalone="no"?>
                 <svg width="50" height="50" version="1.1" xmlns="http://www.w3.org/2000/svg">
                   <line  x1="10" y1="22" x2="45" y2="22" stroke-width="5" stroke="white"/>
                   <line  x1="10" y1="32" x2="45" y2="32" stroke-width="5" stroke="white"/>
@@ -65,11 +70,9 @@
           <div class="container">
             <div class="logo">
               <!-- logo svg -->
-              <?xml version="1.0" standalone="no"?>
                 <svg width="190" height="190" version="1.1" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="95" cy="95" r="95" fill="white"/>
                   <circle cx="95" cy="95" r="85" fill="white" stroke="black" stroke-width="2"/>
-
                   <text x="25" y="105"
                     font-family="RozhaOne-Regular"
                     font-size="28"
@@ -80,11 +83,11 @@
                 </svg>
             </div>
             <!-- counter -->
-              <section class="text-block">
+              <div class="text-block">
                 <p>Ми нагодували вже понад</p>
                 <div id="counter">0</div>
                 <p>гостей різноманітних заходів</p>
-              </section>
+              </div>
               <!-- arrow down -->
               <div class="arrow arrow-dwn"><a  id="btn-down" href="#kino"></a></div>
             </div>
@@ -92,28 +95,35 @@
           <!-- botanica -->
           <section class="botanica">
             <div class="botanica-container">
-              <h3>BOTANICA - Корисна, зручна Їжа та комплексне обслуговування ділових заходів.</h1>
+              <h3>BOTANICA - Корисна, зручна Їжа та комплексне обслуговування ділових заходів.</h3>
               <p>Ми додаємо смак спілкуванню. BOTANICA коли спілкування має смак.</p>
             </div>
-              <ul class="picture-container">
-                <li><img src="../styles/img/pic-icon.png" alt="">
-                  <h6>семінари<br> & тренінги</h6></li>
-                <li><img src="../styles/img/pic-icon-2.png" alt="">
-                  <h6>офіси<br> & hub</h6></li>
-                <li><img src="../styles/img/pic-icon-3.png" alt="">
-                  <h6>конференції<br> & різні заходи<h6></li>
-                <li><img src="../styles/img/pic-icon-4.png" alt="">
-                  <h6>виставки<br> & презентації</h6></li>
-                <div class="clearfix"></div>
+              <ul class="picture-container row">
+                <li class="col s12 m3 l3">
+                  <img src="../styles/img/pic-icon.png" alt="">
+                  <h6>семінари<br> & тренінги</h6>
+                </li>
+                <li class="col s12 m3 l3">
+                  <img src="../styles/img/pic-icon-2.png" alt="">
+                  <h6>офіси<br> & hub</h6>
+                </li>
+                <li class="col s12 m3 l3">
+                  <img src="../styles/img/pic-icon-3.png" alt="">
+                  <h6>конференції<br> & різні заходи</h6>
+                </li>
+                <li class="col s12 m3 l3">
+                  <img src="../styles/img/pic-icon-4.png" alt="">
+                  <h6>виставки<br> & презентації</h6>
+                </li>
               </ul>
-
+              <div class="clearfix"></div>
           </section>
   </header>
   <!-- kino-botanica -->
   <section class="kino-botanica" id="kino">
     <h2>відео botanica</h2>
     <div class="video-screen">
-      <div class="screen"></div>
+      <img class="responsive-img"src="../styles/img/screen.jpg" alt="">
     </div>
   </section>
   <!-- nasha ija -->
@@ -124,12 +134,8 @@
     </div>
       <!-- tabs -->
       <div class="container-tabs">
-        <div class="menu">
-          <a href="#"><span>Меню</span></a>
-        </div>
-        <div class="vega">
-          <a href=""><span>Вега</span></a>
-        </div>
+        <div class="pdf-icon menu"><a class="fancybox" data-fancybox-type="iframe" href="https://www.polyu.edu.hk/iaee/files/pdf-sample.pdf"><span>Меню</span></a></div>
+        <div class="pdf-icon vega"><a class="fancybox" data-fancybox-type="iframe" href="https://www.polyu.edu.hk/iaee/files/pdf-sample.pdf"><span>Вега</span></a></div>
           <ul class="tabs">
             <li class="tab"><a class="active" href="#tab-1">сендвічі</a></li>
             <li class="tab"><a href="#tab-2">супи</a></li>
@@ -153,23 +159,21 @@
         <!-- slider -->
         <div class="slider">
           <ul class="slides">
-            <li><img src="../styles/img/slider.jpg"></li><!-- random image -->
-            <li><img src="../styles/img/slider.jpg"></li><!-- random image -->
-            <li><img src="../styles/img/slider.jpg"></li><!-- random image -->
-            <li><img src="../styles/img/slider.jpg"></li><!-- random image -->
+            <li><img src="../styles/img/slider.jpg" alt=""></li><!-- random image -->
+            <li><img src="../styles/img/slider.jpg" alt=""></li><!-- random image -->
+            <li><img src="../styles/img/slider.jpg" alt=""></li><!-- random image -->
+            <li><img src="../styles/img/slider.jpg" alt=""></li><!-- random image -->
           </ul>
         </div>
         <!-- slides button left -->
-        <div class="arr-left">
-          <?xml version="1.0" standalone="no"?>
+        <div class="arrow arr-left">
             <svg width="70" height="70" version="1.1" xmlns="http://www.w3.org/2000/svg">
               <rect x="10" y="10" width="42" height="42" fill="transparent" stroke="white" stroke-width="3"/>
               <polyline points="20 25 31 38 42 25 42 28 31 40 20 28 20 25 31 38" transform="rotate(90 30 30)" stroke-width="2" stroke="white" fill="white"/>
             </svg>
         </div>
         <!-- slides button right -->
-        <div class="arr-right">
-          <?xml version="1.0" standalone="no"?>
+        <div class="arrow arr-right">
             <svg width="70" height="70" version="1.1" xmlns="http://www.w3.org/2000/svg">
               <rect x="10" y="10" width="42" height="42" fill="transparent" stroke="white" stroke-width="3"/>
               <polyline points="20 25 31 38 42 25 42 28 31 40 20 28 20 25 31 38" transform="rotate(270 30 30)" stroke-width="2" stroke="white" fill="white"/>
@@ -180,29 +184,27 @@
   <!-- kava break -->
   <section class="kava-break" id="kava_id">
     <div class="kava-container">
-      <div class="menu"><a href=""><span>Меню</span></a></div>
+      <div class="pdf-icon menu"><a class="fancybox" data-fancybox-type="iframe" href="https://www.polyu.edu.hk/iaee/files/pdf-sample.pdf"><span>Меню</span></a></div>
       <h2>кава-брейк</h2>
       <p>Часом для прийняття важливого рішення потрібна пауза, яка дозволить обміркувати наступний крок. Саме у такий момент вкрай необхідна велика кава та сендвіч, пиріжок чи легке тістечко. Досвід доводить: іноді головне відбувається саме під час кава-брейку.</p>
     </div>
     <!-- owl carousel -->
     <div class="kava-break-container">
       <div class="owl-carousel" id="kava-carousel">
-        <div class="item"><img src="../styles/img/slider-2.jpg"></div>
-        <div class="item"><img src="../styles/img/slider-2.jpg"></div>
-        <div class="item"><img src="../styles/img/slider-2.jpg"></div>
+        <div class="item"><img src="../styles/img/slider-2.jpg" alt=""></div>
+        <div class="item"><img src="../styles/img/slider-2.jpg" alt=""></div>
+        <div class="item"><img src="../styles/img/slider-2.jpg" alt=""></div>
       </div>
       <div class="control">
         <!-- slides button right -->
-        <div class="arr-left">
-          <?xml version="1.0" standalone="no"?>
+        <div class="arrow arr-left">
             <svg width="70" height="70" version="1.1" xmlns="http://www.w3.org/2000/svg">
               <rect x="10" y="10" width="42" height="42" fill="transparent" stroke="white" stroke-width="3"/>
               <polyline points="20 25 31 38 42 25 42 28 31 40 20 28 20 25 31 38" transform="rotate(90 30 30)" stroke-width="2" stroke="white" fill="white"/>
             </svg>
         </div>
         <!-- slides button right -->
-        <div class="arr-right">
-          <?xml version="1.0" standalone="no"?>
+        <div class="arrow arr-right">
             <svg width="70" height="70" version="1.1" xmlns="http://www.w3.org/2000/svg">
               <rect x="10" y="10" width="42" height="42" fill="transparent" stroke="white" stroke-width="3"/>
               <polyline points="20 25 31 38 42 25 42 28 31 40 20 28 20 25 31 38" transform="rotate(270 30 30)" stroke-width="2" stroke="white" fill="white"/>
@@ -214,30 +216,27 @@
   <!-- snidanok launch -->
   <section class="snidanok" id="snidanok_lunch">
     <div class="snidanok-container">
-      <div class="menu"><a href=""><span>Меню</span></a></div>
+      <div class="pdf-icon menu"><a class="fancybox" data-fancybox-type="iframe" href="https://www.polyu.edu.hk/iaee/files/pdf-sample.pdf"><span>Меню</span></a></div>
       <h2>сніданок / ланч</h2>
       <p>Ми швидко складемо меню будь-якого формату для вашого сніданку чи ланчу. Ми розробили зручні BOTANICA box, усередені яких опиниться обрана вами смакова комбінация.</p>
     </div>
     <!-- owl carousel -->
-    <img class="slider-min" src="../styles/img/slider-2.jpg" alt="">
     <div class="kava-break-container">
       <div class="owl-carousel" id="snidanok-carousel">
-        <div class="item"><img src="../styles/img/slider-3.jpg"></div>
-        <div class="item"><img src="../styles/img/slider-3.jpg"></div>
-        <div class="item"><img src="../styles/img/slider-3.jpg"></div>
+        <div class="item"><img src="../styles/img/slider-3.jpg" alt=""></div>
+        <div class="item"><img src="../styles/img/slider-3.jpg" alt=""></div>
+        <div class="item"><img src="../styles/img/slider-3.jpg" alt=""></div>
       </div>
       <div class="control">
         <!-- slides button right -->
-        <div class="arr-left">
-          <?xml version="1.0" standalone="no"?>
+        <div class="arrow arr-left">
             <svg width="70" height="70" version="1.1" xmlns="http://www.w3.org/2000/svg">
               <rect x="10" y="10" width="42" height="42" fill="transparent" stroke="white" stroke-width="3"/>
               <polyline points="20 25 31 38 42 25 42 28 31 40 20 28 20 25 31 38" transform="rotate(90 30 30)" stroke-width="2" stroke="white" fill="white"/>
             </svg>
         </div>
         <!-- slides button right -->
-        <div class="arr-right">
-          <?xml version="1.0" standalone="no"?>
+        <div class="arrow arr-right">
             <svg width="70" height="70" version="1.1" xmlns="http://www.w3.org/2000/svg">
               <rect x="10" y="10" width="42" height="42" fill="transparent" stroke="white" stroke-width="3"/>
               <polyline points="20 25 31 38 42 25 42 28 31 40 20 28 20 25 31 38" transform="rotate(270 30 30)" stroke-width="2" stroke="white" fill="white"/>
@@ -254,7 +253,7 @@
     </div>
       <!-- tabs -->
       <div class="container-tabs">
-        <div class="menu"><a href=""><span>Меню</span></a></div>
+        <div class="pdf-icon menu"><a class="fancybox" data-fancybox-type="iframe" href="https://www.polyu.edu.hk/iaee/files/pdf-sample.pdf"><span>Меню</span></a></div>
           <ul class="tabs">
             <li class="tab"><a class="active" href="#furshet-tab-1">botanica фуршет</a></li>
             <li class="tab"><a href="#furshet-tab-2">сендвіч фуршет</a></li>
@@ -265,7 +264,7 @@
         <div class="container-tab-content">
           <div id="furshet-tab-1" class="tab-content col s12">
             <h4 class="align-center">botanica фуршет</h4>
-            <p>Основа фуршету BOTANICA  - його ЕКО спрямованість. Натуральний декор із використанням дерева, живих квітів та акцент на фермерські продукти. Відмінність цього фуршету від інших – це «BOTANICA банки». Саме у них ми подаємо салати, гарячі та холодні закуски.<br><br> Організувати Food show на вашому заході – наша турбота. Від приготування суші, млинців до нарізки хамону.</p>
+            <p>Основа фуршету BOTANICA  - його ЕКО спрямованість. Натуральний декор із використанням дерева, живих квітів та акцент на фермерські продукти. Відмінність цього фуршету від інших – це «BOTANICA банки». Саме у них ми подаємо салати, гарячі та холодні закуски.<br><br> Організувати Food show на вашому заході – наша турбота. Від пригoтування суші, млинців до нарізки хамону.</p>
           </div>
           <div id="furshet-tab-2" class="tab-content col s12">Test 2</div>
           <div id="furshet-tab-3" class="tab-content col s12">Test 3</div>
@@ -274,23 +273,21 @@
         <!-- slider -->
         <div class="slider">
           <ul class="slides">
-            <li><img src="../styles/img/slider-5.jpg"></li><!-- random image -->
-            <li><img src="../styles/img/slider-5.jpg"></li><!-- random image -->
-            <li><img src="../styles/img/slider-5.jpg"></li><!-- random image -->
-            <li><img src="../styles/img/slider-5.jpg"></li><!-- random image -->
+            <li><img src="../styles/img/slider-5.jpg" alt=""></li><!-- random image -->
+            <li><img src="../styles/img/slider-5.jpg" alt=""></li><!-- random image -->
+            <li><img src="../styles/img/slider-5.jpg" alt=""></li><!-- random image -->
+            <li><img src="../styles/img/slider-5.jpg" alt=""></li><!-- random image -->
           </ul>
         </div>
         <!-- slides button left -->
-        <div class="arr-left">
-          <?xml version="1.0" standalone="no"?>
+        <div class="arrow arr-left">
             <svg width="70" height="70" version="1.1" xmlns="http://www.w3.org/2000/svg">
               <rect x="10" y="10" width="42" height="42" fill="transparent" stroke="white" stroke-width="3"/>
               <polyline points="20 25 31 38 42 25 42 28 31 40 20 28 20 25 31 38" transform="rotate(90 30 30)" stroke-width="2" stroke="white" fill="white"/>
             </svg>
         </div>
         <!-- slides button right -->
-        <div class="arr-right">
-          <?xml version="1.0" standalone="no"?>
+        <div class="arrow arr-right">
             <svg width="70" height="70" version="1.1" xmlns="http://www.w3.org/2000/svg">
               <rect x="10" y="10" width="42" height="42" fill="transparent" stroke="white" stroke-width="3"/>
               <polyline points="20 25 31 38 42 25 42 28 31 40 20 28 20 25 31 38" transform="rotate(270 30 30)" stroke-width="2" stroke="white" fill="white"/>
@@ -305,27 +302,27 @@
       <p>Після отримання вашої заявки ми зателефонуємо вам задля уточнення деталей. У робочий час, впродовж 1-2 годин, ви матимите свій індивідуальний розрахунок. Ви отримаєте кращу пропозицію в рамках вашого бюджету.</p>
     </div>
     <!-- order form -->
-    <form action="">
+    <form action="POST">
       <div class="form-container">
-        <input class="left" type="text" name="name" value="" placeholder="ім'я">
-        <input class="right" type="text" name="name" value="" placeholder="компанія">
-        <div class="clearfix"></div>
-        <input class="left"type="text" name="name" value="" placeholder="телефон">
-        <input class="right"type="text" name="name" value="" placeholder="кількість персон">
-        <div class="clearfix"></div>
-        <input class="left"type="text" name="name" value="" placeholder="e-mail">
-        <div class="right check-boxes">
-            <label for="kava">кава-брейк</label>
-            <input type="checkbox" id="kava" />
-            <label for=""></label>
-            <label for="furs">фуршет</label>
-            <input type="checkbox" id="furs" />
-            <label for=""></label>
-            <label for="lunch">ланч</label>
-            <input type="checkbox" id="lunch" />
-            <label for=""></label>
+        <div class="row">
+          <input class="col s12 m5 l5" type="text" name="name" value="" placeholder="ім'я">
+          <input class="col s12 m5 l5 offset-m2 offset-l2" type="text" name="name" value="" placeholder="компанія">
         </div>
-
+        <div class="row">
+          <input class="col s12 m5 l5" type="text" name="name" value="" placeholder="телефон">
+          <input class="col s12 m5 l5 offset-m2 offset-l2" type="text" name="name" value="" placeholder="кількість персон">
+        </div>
+        <div class="row">
+        <input class="col s12 m5 l5" type="text" name="name" value="" placeholder="e-mail">
+        <div class="check-boxes col s12 m5 l5 offset-m2 offset-l2">
+            <input type="checkbox" id="kava" />
+            <label for="kava">кава-брейк</label>
+            <input type="checkbox" id="furs" />
+            <label for="furs">фуршет</label>
+            <input type="checkbox" id="lunch" />
+            <label for="lunch">ланч</label>
+        </div>
+        </div>
         <textarea name="name" rows="10" cols="40" placeholder="побажання"></textarea>
         <div class="clearfix"></div>
       </div>
@@ -341,23 +338,21 @@
     <div class="gallery-container">
       <div class="owl-carousel" id="gallery-carousel">
         <div class="item">
-          <button>cisco фуршет</button>
-          <button>кмбш кава-брейк</button>
-          <button>люксофт ланч</button>
-          <button>холідей-ін ланч</button>
+          <a class="open_fancybox" href="#" id="cisco" >cisco фуршет</a>
+          <a class="open_fancybox" href="#" id="kmbs">кмбш кава-брейк</a>
+          <a class="open_fancybox" href="#" id="luxsoft">люксофт ланч</a>
+          <a class="open_fancybox" href="#" id="holiday">холідей-ін ланч</a>
         </div>
       </div>
       <!-- slides button right -->
-      <div class="arr-left">
-        <?xml version="1.0" standalone="no"?>
+      <div class="arrow arr-left">
           <svg width="70" height="70" version="1.1" xmlns="http://www.w3.org/2000/svg">
             <rect x="10" y="10" width="42" height="42" fill="transparent" stroke="black" stroke-width="3"/>
             <polyline points="20 25 31 38 42 25 42 28 31 40 20 28 20 25 31 38" transform="rotate(90 30 30)" stroke-width="2" stroke="black" fill="white"/>
           </svg>
       </div>
       <!-- slides button right -->
-      <div class="arr-right">
-        <?xml version="1.0" standalone="no"?>
+      <div class="arrow arr-right">
           <svg width="70" height="70" version="1.1" xmlns="http://www.w3.org/2000/svg">
             <rect x="10" y="10" width="42" height="42" fill="transparent" stroke="black" stroke-width="3"/>
             <polyline points="20 25 31 38 42 25 42 28 31 40 20 28 20 25 31 38" transform="rotate(270 30 30)" stroke-width="2" stroke="black" fill="white"/>
@@ -387,16 +382,14 @@
           <!-- more slides . . . -->
         </ul>
         <!-- slides button left -->
-        <div class="arr-left">
-          <?xml version="1.0" standalone="no"?>
+        <div class="arrow arr-left">
             <svg width="70" height="70" version="1.1" xmlns="http://www.w3.org/2000/svg">
               <rect x="10" y="10" width="42" height="42" fill="transparent" stroke="black" stroke-width="3"/>
               <polyline points="20 25 31 38 42 25 42 28 31 40 20 28 20 25 31 38" transform="rotate(90 30 30)" stroke-width="2" stroke="black" fill="white"/>
             </svg>
         </div>
         <!-- slides button right -->
-        <div class="arr-right">
-          <?xml version="1.0" standalone="no"?>
+        <div class="arrow arr-right">
             <svg width="70" height="70" version="1.1" xmlns="http://www.w3.org/2000/svg">
               <rect x="10" y="10" width="42" height="42" fill="transparent" stroke="black" stroke-width="3"/>
               <polyline points="20 25 31 38 42 25 42 28 31 40 20 28 20 25 31 38" transform="rotate(270 30 30)" stroke-width="2" stroke="black" fill="white"/>
@@ -420,9 +413,9 @@
             <h3>счастье hub</h3>
             <p>вул Саксаганського, 70а</p>
             <div class="img-line">
-              <div class="image"></div>
-              <div class="image"></div>
-              <div class="image"></div>
+              <a href="#" class="open_fancybox image"></a>
+              <a href="#" class="open_fancybox image"></a>
+              <a href="#" class="open_fancybox image"></a>
             </div>
             <div class="clearfix"></div>
           </div>
@@ -430,9 +423,9 @@
             <h3>мистецький арсенал</h3>
             <p>вул Лаврська, 10-12</p>
             <div class="img-line">
-              <div class="image"></div>
-              <div class="image"></div>
-              <div class="image"></div>
+              <a href="#" class="open_fancybox image"></a>
+              <a href="#" class="open_fancybox image"></a>
+              <a href="#" class="open_fancybox image"></a>
             </div>
             <div class="clearfix"></div>
           </div>
@@ -440,30 +433,12 @@
             <h3>пінчукартцентр</h3>
             <p>вул Велика Васильківська/Басейна, 1/3-2</p>
             <div class="img-line">
-              <div class="image"></div>
-              <div class="image"></div>
-              <div class="image"></div>
+              <a href="#" class="open_fancybox image"></a>
+              <a href="#" class="open_fancybox image"></a>
+              <a href="#" class="open_fancybox image"></a>
             </div>
             <div class="clearfix"></div>
           </div>
-        </div>
-      </div>
-      <div class="control">
-        <!-- slides button right -->
-        <div class="arr-left">
-          <?xml version="1.0" standalone="no"?>
-            <svg width="70" height="70" version="1.1" xmlns="http://www.w3.org/2000/svg">
-              <rect x="10" y="10" width="42" height="42" fill="transparent" stroke="black" stroke-width="3"/>
-              <polyline points="20 25 31 38 42 25 42 28 31 40 20 28 20 25 31 38" transform="rotate(90 30 30)" stroke-width="2" stroke="black" fill="white"/>
-            </svg>
-        </div>
-        <!-- slides button right -->
-        <div class="arr-right">
-          <?xml version="1.0" standalone="no"?>
-            <svg width="70" height="70" version="1.1" xmlns="http://www.w3.org/2000/svg">
-              <rect x="10" y="10" width="42" height="42" fill="transparent" stroke="black" stroke-width="3"/>
-              <polyline points="20 25 31 38 42 25 42 28 31 40 20 28 20 25 31 38" transform="rotate(270 30 30)" stroke-width="2" stroke="black" fill="white"/>
-            </svg>
         </div>
       </div>
     </div>
@@ -473,20 +448,28 @@
       <h2>контакти</h2>
       <div class="footer-container">
         <p class="center">Ви замовляете - ми готуємо, привозимо, годуємо.</p>
-        <div class="social-link">
-          <div class="link mail"><p>+ 38 098 009 00 00</p><a href="">info@botanica.com.ua</a></div>
-          <div class="link fb"><a href="">fb.com/Botanica</a></div>
-          <div class="link insta"><a href="">instagram.com/Botanica</a></div>
-          <div class="clearfix"></div>
+        <div class="row social-link">
+          <div class="col s6 m4 l4 link mail"><p>+ 38 098 009 00 00</p><a href="">info@botanica.com.ua</a></div>
+          <div class="col s3 m4 l4 link fb"><a href="">fb.com/Botanica</a></div>
+          <div class="col s3 m4 l4 link insta"><a href="">instagram.com/Botanica</a></div>
         </div>
         <h4 class="center">ми вирішили ваші проблеми!</h4>
       </div>
   </footer>
+
   <!--Import jQuery before materialize.js-->
-  <script type="text/javascript" src="js/jquery-2.2.4 .js"></script>
+  <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+  <!-- Add mousewheel plugin (this is optional) -->
+  <script type="text/javascript" src="js/jquery/jquery.mousewheel-3.0.6.pack.js"></script>
+  <!-- Add fancyBox -->
+  <script type="text/javascript" src="js/fancy-box/jquery.fancybox.pack.js"></script>
+  <!-- Optionally add helpers - button, thumbnail and/or media -->
+  <script type="text/javascript" src="js/fancy-box/helpers/jquery.fancybox-buttons.js"></script>
+  <script type="text/javascript" src="js/fancy-box/helpers/jquery.fancybox-media.js"></script>
+  <script type="text/javascript" src="/js/fancy-box/helpers/jquery.fancybox-thumbs.js"></script>
   <!-- carousel -->
   <script type="text/javascript" src="js/owl.carousel.js"></script>
-
+  <script type="text/javascript" src="js/my_fancybox.js"></script>
   <!-- Compiled and minified JavaScript -->
   <script src="js/materialize.min.js"></script>
   <script src="js/main.js" type="text/javascript"></script>

@@ -1,122 +1,126 @@
-:root {
-  --font-opensans-regular: 'OpenSans-Regular', sans-serif;
-  --font-opensans-bold: 'OpenSans-Bold', sans-serif;
-  --font-playfairdisplay-bold: 'PlayfairDisplay-Bold', serif;
-  --font-playfairdisplay-regular: 'PlayfairDisplay-Regular', serif;
-  --font-rozhaone-regular: 'RozhaOne-Regular', sans-serif;
-}
+
 body {
-  margin: 0;
-  padding: 0;
-  font-family: var(--font-opensans-regular);
+  font-family: 'OpenSans-Regular', sans-serif;
+  font-size: 18px;
 }
+
 h2 {
+  font-family: 'OpenSans-Bold', sans-serif;
   font-size: 3.38rem;
-  text-align: center;
-  font-family: var(--font-opensans-bold);
-  text-transform: uppercase;
   line-height: 100%;
+  text-align: center;
+  text-transform: uppercase;
 }
+
 h3 {
   font-size: 2.3rem;
-  line-height: 130%;
   font-weight: bold;
+  line-height: 130%;
   letter-spacing: 1px;
 }
+
 h4 {
+  font-family: 'OpenSans-Bold', sans-serif;
   font-size: 1.7rem;
-  font-family: var(--font-opensans-bold);
-  letter-spacing: 0.8px;
+  letter-spacing: .8px;
   text-transform: uppercase;
 }
+
 h6 {
   font-size: 1.2rem;
 }
+
 p {
-  font-family: var(--font-playfairdisplay-regular);
+  font-family: 'PlayfairDisplay-Regular', serif;
   font-size: 1.25rem;
   line-height: 130%;
 }
 
 .container {
-  max-width: 1100px;
-  min-width: 320px;
   width: 100%;
-
+  max-width: 1100px;
 }
+
 .picture-container {
-  width: 50%;
   max-width: 880px;
-  min-width: 450px;
   margin: 63px auto;
 }
+
 .slider-min {
   display: none;
 }
-/*  header  */
 
-/* nav  */
+/*  header */
+
 .container-nav {
-  width: 80%;
+  width: 100%;
   max-width: 765px;
   margin: 0 auto;
 }
 
 header ul li a:hover {
+  transition: all 100ms;
   color: #95a45f;
   border-bottom: 5px solid #95a45f;
-  transition: all 100ms;
 }
 
 header .background {
-  height: 435px;
-  background: url(../styles/img/header.jpg) no-repeat -32px -566px;
-  color: #fff;
   position: relative;
+  height: 435px;
+  color: #fff;
+  background: url(../styles/img/header.jpg) no-repeat -32px -566px;
 }
+
 header .logo {
+  width: 180px;
   margin: 0 auto;
   padding-top: 40px;
-  width: 180px;
   padding-bottom: 15px;
 }
+
 header .text-block {
   width: 240px;
-  margin: 0 auto;
-  line-height: 0.7;
+  margin: 20px auto;
   text-align: center;
 }
+
 header .text-block p {
-  font-family: var(--font-opensans-regular);
+  font-family: 'OpenSans-Regular', sans-serif;
   font-size: 1.058rem;
   line-height: 34%;
 }
+
 header #counter {
   font-size: 4.5rem;
   font-weight: bold;
 }
+
 header .arrow a {
-  background: url(../styles/img/scroll-down.png) no-repeat;
-  width: 44px;
-  height: 44px;
-  cursor: pointer;
   position: absolute;
   top: 90%;
   left: 49%;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
   transition: 500ms;
+  background: url(../styles/img/scroll-down.png) no-repeat;
 }
+
 header .arrow a:hover {
   transform: scale(1.08);
 }
+
 header .botanica {
   padding-top: 22px;
 }
+
 header .botanica-container {
-  width: 71%;
+  width: 100%;
   max-width: 960px;
   margin: 0 auto;
   text-align: center;
 }
+
 header .botanica ul li {
   float: left;
   width: 25%;
@@ -124,68 +128,61 @@ header .botanica ul li {
   text-transform: uppercase;
 }
 
-/*  Kino botanica  */
+/*  Kino botanica */
 
 .kino-botanica {
-  text-transform: uppercase;
-  text-align: center;
-  background:rgba(255, 0, 0, 0.5) url(../styles/img/kino-botanica.jpg) no-repeat -15px -356px;
-  height: 582px;
   position: relative;
   overflow: hidden;
+  height: 582px;
+  text-align: center;
+  text-transform: uppercase;
+  background: rgba(255, 0, 0, .5) url(../styles/img/kino-botanica.jpg) no-repeat -15px -356px;
 }
+
 .kino-botanica::after {
-  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
   display: block;
   width: 100%;
   height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
   content: '';
+  background-color: rgba(0, 0, 0, .7);
 }
 
 .kino-botanica h2 {
+  position: absolute;
+  z-index: 100;
+  top: -4%;
+  right: 0;
+  left: 0;
   padding-top: 20px;
   color: #fff;
-  z-index: 100;
-  position: absolute;
-  left: 0%;
-  right: 0%;
-  top: -4%;
 }
+
 .kino-botanica .video-screen {
-  width: 100%;
-  max-width: 665px;
-  min-width: 500px;
-  height: 420px;
-  margin: 0 auto;
-  margin-top: 25px;
-  border: 25px solid #000;
   position: absolute;
   z-index: 1;
-  left: 0%;
-  right: 0%;
   top: 14%;
-}
-.kino-botanica .video-screen .screen {
-  background: url(../styles/img/screen.jpg) no-repeat;
-  position: absolute;
-  top: 0;
+  right: 0;
   left: 0;
-  z-index: 102;
   width: 100%;
-  height: 100%;
+  max-width: 665px;
+  margin: 0 auto;
+  margin-top: 25px;
+  background-size: 100% 100%;
+  border: 2em solid #000;
 }
 
-/*  nasha ija  */
+/*  nasha ija */
 
 .nasha-ija {
-  background: url(../styles/img/nasha-iga.jpg) no-repeat -38px -8px;
   font-size: 1.3rem;
   line-height: 1.2;
   padding-bottom: 50px;
+  background: url(../styles/img/nasha-iga.jpg) no-repeat -38px -8px;
 }
+
 .nasha-ija-container {
   width: 71%;
   max-width: 775px;
@@ -193,286 +190,318 @@ header .botanica ul li {
 }
 
 .nasha-ija h2 {
-  padding-top: 32px;
   line-height: 117%;
+  padding-top: 32px;
 }
+
 .nasha-ija .container-tabs {
-  width: 75%;
+  position: relative;
+  width: 100%;
   max-width: 820px;
-  min-width: 500px;
   margin: 47px auto;
   margin-bottom: 0;
   background-color: #fff;
-  position: relative;
 }
+
 .nasha-ija .container-tabs .menu a {
+  position: absolute;
+  top: 73px;
+  right: 12%;
   display: block;
+  width: 12%;
+  height: 7%;
   background: url(../styles/img/menu.png) no-repeat;
-  position: absolute;
-  top: 73px;
-  right:12%;
-  width: 12%;
-  height: 7%;
 }
+
 .nasha-ija .container-tabs .menu a span {
-  margin-left: 44px;
-  font-size: 0.9rem;
+  font-size: .9rem;
   line-height: 300%;
+  margin-left: 44px;
   text-decoration: underline;
   color: #000;
 }
+
 .nasha-ija .container-tabs .vega a {
-  display: block;
-  background: url(../styles/img/vega.png) no-repeat;
   position: absolute;
   top: 73px;
-  right: 0.05%;
+  right: 0%;
+  display: block;
   width: 12%;
   height: 7%;
+  background: url(../styles/img/vega.png) no-repeat;
 }
+
 .nasha-ija .container-tabs .vega a span {
-  margin-left: 44px;
-  font-size: 0.9rem;
+  font-size: .9rem;
   line-height: 300%;
+  margin-left: 44px;
   text-decoration: underline;
   color: #000;
 }
+
 .furshet .container-tabs .menu a:hover,
 .snidanok .snidanok-container .menu a:hover,
 .kava-break .kava-container .menu a:hover,
 .nasha-ija .container-tabs .vega a:hover,
 .nasha-ija .container-tabs .menu a:hover {
-  opacity: 0.7;
+  opacity: .7;
 }
+
 .nasha-ija .container-tabs .container-tab-content {
   width: 95%;
   height: 122px;
   margin: 0 auto;
   margin-bottom: 30px;
 }
+
 .nasha-ija .container-tabs .container-tab-content p {
   font-size: 1.1rem;
   line-height: 125%;
 }
+
 .nasha-ija .tab-content h4 {
+  margin-top: 32px;
   text-align: center;
   text-transform: uppercase;
-  margin-top: 32px;
 }
+
 .nasha-ija .container-tabs .arr-left {
   position: absolute;
+  z-index: 10;
   top: 61%;
   left: 1%;
-  z-index: 10;
-  cursor: pointer;
-}
-.nasha-ija .container-tabs .arr-right {
-  position: absolute;
-  top: 61%;
-  right: 0%;
-  z-index: 10;
   cursor: pointer;
 }
 
-/*   kava break  */
+.nasha-ija .container-tabs .arr-right {
+  position: absolute;
+  z-index: 10;
+  top: 61%;
+  right: 0;
+  cursor: pointer;
+}
+
+/*   kava break */
 
 .kava-break {
   text-align: center;
 }
+
 .kava-break .kava-container {
+  position: relative;
   width: 100%;
-  max-width: 800px;
   min-width: 260px;
+  max-width: 800px;
   margin: 0 auto;
   margin-top: 60px;
-  position: relative;
 }
+
 .kava-break .kava-container .menu a {
-  display: block;
-  background: url(../styles/img/menu.png) no-repeat;
   position: absolute;
   top: 23px;
   right: 3%;
+  display: block;
   width: 12%;
   height: 26%;
+  background: url(../styles/img/menu.png) no-repeat;
 }
+
 .kava-break .kava-container .menu a span {
-  margin-left: 44px;
-  font-size: 0.9rem;
+  font-size: .9rem;
   line-height: 300%;
+  margin-left: 44px;
   text-decoration: underline;
   color: #000;
 }
+
 .kava-break h2 {
   padding-top: 23px;
 }
+
 .kava-break .kava-break-container {
+  position: relative;
   width: 100%;
   max-width: 1200px;
-  min-width: 500px;
   margin: 36px auto;
-  position: relative;
 }
+
 .kava-break .kava-break-container .arr-left {
   position: absolute;
+  z-index: 10;
   top: 42%;
   left: -1%;
-  z-index: 10;
-  cursor: pointer;
-}
-.kava-break .kava-break-container .arr-right {
-  position: absolute;
-  top: 42%;
-  right: -2%;
-  z-index: 10;
   cursor: pointer;
 }
 
-/*  snidanok  */
+.kava-break .kava-break-container .arr-right {
+  position: absolute;
+  z-index: 10;
+  top: 42%;
+  right: -2%;
+  cursor: pointer;
+}
+
+/*  snidanok */
 
 .snidanok {
   margin-top: 60px;
 }
+
 .snidanok .snidanok-container {
+  position: relative;
   width: 100%;
   max-width: 839px;
   margin: 0 auto;
-  position: relative;
 }
+
 .snidanok .snidanok-container .menu a {
-  display: block;
-  background: url(../styles/img/menu.png) no-repeat;
   position: absolute;
   top: 5px;
   right: 3%;
+  display: block;
   width: 12%;
   height: 43%;
+  background: url(../styles/img/menu.png) no-repeat;
 }
+
 .snidanok .snidanok-container .menu a span {
-  margin-left: 44px;
-  font-size: 0.9rem;
+  font-size: .9rem;
   line-height: 300%;
+  margin-left: 44px;
   text-decoration: underline;
   color: #000;
 }
+
 .snidanok .kava-break-container {
+  position: relative;
   width: 100%;
   max-width: 1200px;
-  min-width: 500px;
   margin: 50px auto;
-  position: relative;
 }
+
 .snidanok .kava-break-container .arr-left {
   position: absolute;
+  z-index: 10;
   top: 42%;
   left: -1%;
-  z-index: 10;
   cursor: pointer;
 }
+
 .snidanok .kava-break-container .arr-right {
   position: absolute;
+  z-index: 10;
   top: 42%;
   right: -2%;
-  z-index: 10;
   cursor: pointer;
 }
 
-/*  furshet  */
+/*  furshet */
 
 .furshet {
-  background: url(../styles/img/furset.jpg) no-repeat -145px 0px;
   font-size: 1.3rem;
   line-height: 1.2;
   padding-bottom: 60px;
+  background: url(../styles/img/furset.jpg) no-repeat -145px 0;
 }
+
 .furshet .furshet-container {
-  width: 71%;
+  width: 100%;
   max-width: 775px;
   margin: 0 auto;
 }
 
 .furshet .furshet-container h2 {
-  padding-top: 45px;
   line-height: 118%;
+  padding-top: 45px;
 }
+
 .furshet .furshet-container p {
   line-height: 119%;
 }
 
 .furshet .container-tabs {
+  position: relative;
   width: 100%;
   max-width: 820px;
-  min-width: 500px;
   margin: 30px auto;
   margin-bottom: 0;
   background-color: #fff;
-  position: relative;
 }
+
 .furshet .container-tabs .menu a {
-  display: block;
-  background: url(../styles/img/menu.png) no-repeat;
   position: absolute;
   top: 73px;
   right: 6%;
+  display: block;
   width: 12%;
   height: 7%;
+  background: url(../styles/img/menu.png) no-repeat;
 }
+
 .furshet .container-tabs .menu a span {
-  margin-left: 44px;
-  font-size: 0.9rem;
+  font-size: .9rem;
   line-height: 300%;
+  margin-left: 44px;
   text-decoration: underline;
   color: #000;
 }
+
 .furshet .container-tab-content {
   width: 94%;
   height: 152px;
   margin: 0 auto;
   margin-bottom: 30px;
 }
+
 .furshet .container-tabs .container-tab-content p {
   font-size: 1.1rem;
   line-height: 125%;
 }
+
 .furshet .tab-content h4 {
+  margin-top: 32px;
   text-align: center;
   text-transform: uppercase;
-  margin-top: 32px;
 }
+
 .furshet .container-tabs .arr-left {
   position: absolute;
+  z-index: 10;
   top: 63%;
   left: 1%;
-  z-index: 10;
-  cursor: pointer;
-}
-.furshet .container-tabs .arr-right {
-  position: absolute;
-  top: 63%;
-  right: 0%;
-  z-index: 10;
   cursor: pointer;
 }
 
-/* zamovlenna  */
+.furshet .container-tabs .arr-right {
+  position: absolute;
+  z-index: 10;
+  top: 63%;
+  right: 0;
+  cursor: pointer;
+}
+
+/* zamovlenna */
+
 .zamovlenna-container {
-  width: 71%;
+  width: 100%;
   max-width: 775px;
   margin: 40px auto;
 }
+
 .zamovlenna h2 {
   padding-top: 26px;
 }
 
-/*  gallery  */
+
+/*  gallery */
 
 .gallery .gallery-container {
+  position: relative;
   width: 100%;
   max-width: 1225px;
   margin: 32px auto;
-  position: relative;
-
 }
+
 .gallery .slider .slides {
   background-color: #fff;
 }
@@ -480,92 +509,110 @@ header .botanica ul li {
 .gallery h2 {
   padding-top: 13px;
 }
-.gallery button {
+
+.gallery a {
+  font-size: 2rem;
+  display: block;
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
-  padding-top: 59px;
-  padding-bottom: 52px;
   margin-top: 0;
   margin-bottom: 23px;
-  text-transform: uppercase;
+  padding-top: 59px;
+  padding-bottom: 52px;
   transition: 500ms;
-}
-.gallery button:nth-child(1) {
-  background: url(../styles/img/banner.jpg) no-repeat -13px -228px;
-}
-.gallery button:nth-child(2) {
-  background: url(../styles/img/banner-2.jpg) no-repeat -2px -34px;
-}
-.gallery button:nth-child(3) {
-  background: url(../styles/img/banner-3.jpg) no-repeat 0px -211px;
-}
-.gallery button:nth-child(4) {
-  background: url(../styles/img/banner-4.jpg) no-repeat 0px -118px;
+  text-transform: uppercase;
+  color: #fff;
 }
 
-.gallery button:hover {
+.gallery a:nth-child(1) {
+  background: url(../styles/img/banner.jpg) no-repeat -13px -228px;
+}
+
+.gallery a:nth-child(2) {
+  background: url(../styles/img/banner-2.jpg) no-repeat -2px -34px;
+}
+
+.gallery a:nth-child(3) {
+  background: url(../styles/img/banner-3.jpg) no-repeat 0 -211px;
+}
+
+.gallery a:nth-child(4) {
+  background: url(../styles/img/banner-4.jpg) no-repeat 0 -118px;
+}
+
+.gallery a:hover {
   transform: scale(1.05);
   color: #fff;
 }
+
 .gallery .gallery-container .arr-left {
   position: absolute;
-  left: 0%;
-  top: 44%;
   z-index: 10;
+  top: 44%;
+  left: 0;
   cursor: pointer;
 }
+
 .gallery .gallery-container .arr-right {
   position: absolute;
-  right: -1%;
-  top: 44%;
   z-index: 10;
+  top: 44%;
+  right: -1%;
   cursor: pointer;
 }
 
-/*  about us  */
+/*  about us */
 
 .about-us {
-  background: url(../styles/img/furset.jpg) no-repeat 0px 0px;
   padding-bottom: 30px;
+  background: url(../styles/img/furset.jpg) no-repeat 0 0;
 }
+
 .about-us .about-us-container {
+  position: relative;
   width: 100%;
   max-width: 750px;
   margin: 58px auto;
   margin-bottom: 0;
-  position: relative;
 }
+
 .about-us h2 {
   padding-top: 45px;
 }
+
 .about-us .about-us-container .arr-left {
+  position: absolute;
+  z-index: 10;
   top: 142px;
   left: -10px;
-  position: absolute;
-  z-index: 10;
   cursor: pointer;
 }
+
 .about-us .about-us-container .arr-right {
   position: absolute;
-  right: -17px;
-  top: 142px;
   z-index: 10;
+  top: 142px;
+  right: -17px;
   cursor: pointer;
 }
+
 .about-us .slider {
   width: 102%;
   max-width: 765px;
   margin-top: 36px;
 }
+
 .about-us .slider .slides {
-  background: #fff;
   position: relative;
+  background: #fff;
 }
+
 .about-us .about-info {
   width: 83%;
   margin: 100px auto;
 }
+
 .about-us .about-info .img-frame {
   position: relative;
   overflow: hidden;
@@ -573,123 +620,150 @@ header .botanica ul li {
   height: 142px;
   margin-right: 17px;
 }
+
 .about-us .about-info .img-frame:before {
-  content: "";
   position: absolute;
-  width: 200%;
-  height: 200%;
+  z-index: -1;
   top: -14px;
   left: -42px;
-  z-index: -1;
+  width: 200%;
+  height: 200%;
+  content: '';
   background: url(../styles/img/photo.jpg) 0 0 no-repeat;
 }
+
 .about-us .about-info-text h5 {
   line-height: 78%;
 }
+
 .about-us .about-info-text h6 {
   font-family: 'Playfair Display', serif;
 }
+
 .about-us .about-info p {
   font-size: 1rem;
 }
 
-/*  our stands  */
+/*  our stands */
 
 .our-stands {
-  text-align: center;
   padding-top: 12px;
+  text-align: center;
 }
+
 .our-stands .gallery-container {
   position: relative;
-  margin: -10 auto;
+  width: 100%;
+  max-width: 815px;
+  margin: 23px auto;
 }
+
 .our-stands .gallery-block {
   width: 100%;
   margin: 0 auto;
-  max-width: 815px;
 }
+
 .our-stands .gallery-block h3 {
-  line-height: 0.5;
+  text-align: center;
   font-size: 2.15rem;
+  line-height: .5;
   text-transform: uppercase;
 }
+
 .our-stands .gallery-block p {
-  line-height: 0.5;
+  line-height: .5;
+}
+.our-stands .gallery-block .img-line {
+  margin-top: 11px;
 }
 .our-stands .gallery-block .img-line .image {
   position: relative;
-  overflow: hidden;
-  width: 245px;
-  height: 160px;
   float: left;
-  margin-left: 20px;
+  overflow: hidden;
+  width: 30%;
+  height: 160px;
   margin-bottom: 10px;
+  margin-left: 20px;
   cursor: pointer;
   transition: 500ms;
 }
+
 .our-stands .gallery-block .img-line .image:hover {
   transform: scale(1.08);
-  opacity: 0.7;
+  opacity: .7;
 }
+
 .our-stands .gallery-block .img-line .image:before {
-  content: "";
   position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  top: 0px;
-  left: 0px;
-  z-index: -1;
+  content: '';
 }
+
 .our-stands .gallery-block:nth-child(1) .img-line .image:nth-child(1) {
   background: url(../styles/img/image.jpg) -15px -314px no-repeat;
 }
+
 .our-stands .gallery-block:nth-child(1) .img-line .image:nth-child(2) {
   background: url(../styles/img/image.jpg) -39px -99px no-repeat;
 }
+
 .our-stands .gallery-block:nth-child(1) .img-line .image:nth-child(3) {
   background: url(../styles/img/image.jpg) -100px -194px no-repeat;
 }
+
 .our-stands .gallery-block:nth-child(2) .img-line .image:nth-child(1) {
   background: url(../styles/img/image-1.jpg) -15px -314px no-repeat;
 }
+
 .our-stands .gallery-block:nth-child(2) .img-line .image:nth-child(2) {
   background: url(../styles/img/image-1.jpg) -228px -92px no-repeat;
 }
+
 .our-stands .gallery-block:nth-child(2) .img-line .image:nth-child(3) {
   background: url(../styles/img/image-1.jpg) -127px -326px no-repeat;
 }
+
 .our-stands .gallery-block:nth-child(3) .img-line .image:nth-child(1) {
   background: url(../styles/img/image-2.jpg) -47px -319px no-repeat;
 }
+
 .our-stands .gallery-block:nth-child(3) .img-line .image:nth-child(2) {
   background: url(../styles/img/image-2.jpg) -175px -146px no-repeat;
 }
+
 .our-stands .gallery-block:nth-child(3) .img-line .image:nth-child(3) {
   background: url(../styles/img/image-2.jpg) -241px -227px no-repeat;
 }
+
 .our-stands .control .arr-left {
   position: absolute;
-  top: 46%;
-  left: 17%;
   z-index: 10;
+  top: 46%;
+  left: 0;
   cursor: pointer;
 }
+
 .our-stands .control .arr-right {
   position: absolute;
-  top: 46%;
-  right: 17%;
   z-index: 10;
+  top: 46%;
+  right: 0;
   cursor: pointer;
 }
 
-/*  footer  */
+/*  footer */
 
 footer {
-  background: url(../styles/img/footer.jpg) no-repeat -54px -86px;
-  padding-top: 10px;
   margin-top: 100px;
+  padding-top: 10px;
   padding-bottom: 130px;
+  background: url(../styles/img/footer.jpg) no-repeat -54px -86px;
 }
+
 footer .footer-container {
   width: 100%;
   max-width: 820px;
@@ -697,20 +771,25 @@ footer .footer-container {
   padding-bottom: 35px;
   background: #fff;
 }
+
 footer .footer-container > p {
-  padding: 35px 105px;
   margin-bottom: 0;
+  padding-top: 35px;
   padding-bottom: 25px;
 }
+
 footer .social-link {
   width: 100%;
-  margin: 17px auto;
-  margin-bottom: 30px;
+  max-width: 739px;
+  margin-top: 25px;
 }
+
 footer .social-link a {
   font-size: 1.2rem;
   color: #000;
 }
+footer
+
 footer .social-link a:hover {
   border-bottom: 2px solid #95a45f;
 }
@@ -718,12 +797,14 @@ footer .social-link a:hover {
 footer .social-link .mail {
   margin-top: -13px;
 }
-footer .social-link .mail>p {
+
+footer .social-link .mail > p {
   font-family: inherit;
   line-height: 0;
   display: block;
   margin: 10px 0;
 }
+
 footer .social-link .mail a {
   display: inline-block;
   margin-top: -10px;
@@ -731,19 +812,24 @@ footer .social-link .mail a {
 
 footer .social-link .fb {
   background: url(../styles/img/fb.jpg) 0px 0px no-repeat;
+  padding-left: 50px;
+  margin-top: -12px;
+  height: 44px;
 }
-footer .social-link .insta {
-  background: url(../styles/img/insta.jpg) 0px 0px no-repeat;
+footer .social-link a {
+  line-height: 200%;
 }
 
-footer .social-link .link {
-  float: left;
-  margin-right: 30px;
-  padding: 5px;
-  padding-left: 54px;
-  font-size: 1.3rem;
+footer .social-link .insta {
+  background: url(../styles/img/insta.jpg) 0px 0px no-repeat;
+    padding-left: 50px;
+    margin-top: -12px;
+    height: 44px;
 }
+
 footer .footer-container  h4 {
   font-size: 2rem;
   color: #95a45f;
 }
+
+*/

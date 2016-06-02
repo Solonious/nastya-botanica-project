@@ -59,6 +59,7 @@ p {
 }
 
 header ul li a:hover {
+  -webkit-transition: all 100ms;
   transition: all 100ms;
   color: #95a45f;
   border-bottom: 5px solid #95a45f;
@@ -102,12 +103,14 @@ header .arrow a {
   width: 44px;
   height: 44px;
   cursor: pointer;
+  -webkit-transition: 500ms;
   transition: 500ms;
   background: url(../styles/img/scroll-down.png) no-repeat;
 }
 
 header .arrow a:hover {
-  transform: scale(1.08);
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
 }
 
 header .botanica {
@@ -520,6 +523,7 @@ header .botanica ul li {
   margin-bottom: 23px;
   padding-top: 59px;
   padding-bottom: 52px;
+  -webkit-transition: 500ms;
   transition: 500ms;
   text-transform: uppercase;
   color: #fff;
@@ -542,7 +546,8 @@ header .botanica ul li {
 }
 
 .gallery a:hover {
-  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
   color: #fff;
 }
 
@@ -685,11 +690,13 @@ header .botanica ul li {
   margin-bottom: 10px;
   margin-left: 20px;
   cursor: pointer;
+  -webkit-transition: 500ms;
   transition: 500ms;
 }
 
 .our-stands .gallery-block .img-line .image:hover {
-  transform: scale(1.08);
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
   opacity: .7;
 }
 
@@ -831,5 +838,3 @@ footer .footer-container  h4 {
   font-size: 2rem;
   color: #95a45f;
 }
-
-*/

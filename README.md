@@ -1,9 +1,9 @@
 # nastya-botanica-project
 
-install node js
+install node js (4.4.5)
 apt-get install nodejs for linux
-brew install node 
+brew install node
 
-npm i 
+npm i
 
 gulp dev

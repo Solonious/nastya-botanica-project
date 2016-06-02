@@ -1,6 +1,7 @@
+  'use strict';
 
-;(() => {
-  let $count = $('#counter');
+;(function() {
+  var $count = $('#counter');
 
 function countUp ( $el, startTime, callback) {
 
@@ -33,22 +34,22 @@ countUp($count, 0);
 })();
 
 // slider
-$(document).ready(() => {
+$(document).ready(function() {
      $('.slider').slider({
        indicators: false,
        height: 360
      });
      //  slider control
-     let btnLeft = $('.container-tabs .arr-left'),
+     var btnLeft = $('.container-tabs .arr-left'),
         btnRight = $('.container-tabs .arr-right');
 
      // Previous slide
-     btnLeft.on('click',() => {
+     btnLeft.on('click',function () {
          $('.slider').slider('prev');
      });
 
      // Next slide
-     btnRight.on('click',() => {
+     btnRight.on('click',function () {
          $('.slider').slider('next');
      });
      //  mobile navigation
@@ -56,14 +57,14 @@ $(document).ready(() => {
 });
 
 // tab control
-$(document).ready(() => {
+$(document).ready(function () {
     $('ul.tabs').tabs('select_tab', 'tab_id');
     //$('.furshet ul.tabs').tabs('select_tab', 'tab_id');
 });
 
-$(document).ready(() => {
+$(document).ready(function () {
   //kava carousel
-  let $kava = $('#kava-carousel'),
+  var $kava = $('#kava-carousel'),
       $snidanok = $('#snidanok-carousel'),
       $gallery = $('#gallery-carousel'),
       $ourStands = $('#ourstands-carousel'),
@@ -96,46 +97,46 @@ $(document).ready(() => {
     };
 
   $kava.owlCarousel(sliderConfOne);
-  $('#kava_id .control .arr-left').click(() => {
+  $('#kava_id .control .arr-left').click(function () {
     $kava.trigger('next.owl.carousel', [800]);
   })
-  $('#kava_id .control .arr-right').click(() => {
+  $('#kava_id .control .arr-right').click(function () {
     $kava.trigger('prev.owl.carousel', [800]);
   });
 
   $snidanok.owlCarousel(sliderConfOne);
-  $('#snidanok_lunch .control .arr-left').click(() => {
+  $('#snidanok_lunch .control .arr-left').click(function () {
     $snidanok.trigger('next.owl.carousel', [800]);
   })
-  $('#snidanok_lunch .control .arr-right').click(() => {
+  $('#snidanok_lunch .control .arr-right').click(function () {
     $snidanok.trigger('prev.owl.carousel', [800]);
   });
 
   $gallery.owlCarousel(sliderConfTwo);
-  $('#gallery_id .control .arr-left').click(() => {
+  $('#gallery_id .control .arr-left').click(function () {
     $gallery.trigger('next.owl.carousel', [800]);
   })
-  $('#gallery_id .control .arr-right').click(() => {
+  $('#gallery_id .control .arr-right').click( function () {
     $gallery.trigger('prev.owl.carousel', [800]);
   });
   $ourStands.owlCarousel(sliderConfTwo);
-  $('#location .control .arr-left').click(() => {
+  $('#location .control .arr-left').click(function () {
     $ourStands.trigger('next.owl.carousel', [800]);
   })
-  $('#location .control .arr-right').click(() => {
+  $('#location .control .arr-right').click(function () {
     $ourStands.trigger('prev.owl.carousel', [800]);
   });
 });
 
   // scroll
-$(document).ready(() => {
+$(document).ready(function () {
 
   function myScroll (event) {
     //отменяем стандартную обработку нажатия по ссылке
     event.preventDefault();
 
     //забираем идентификатор бока с атрибута href
-    let id  = $(this).attr('href'),
+    var id  = $(this).attr('href'),
 
     //узнаем высоту от начала страницы до блока на который ссылается якорь
       top = $(id).offset().top;

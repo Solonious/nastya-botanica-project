@@ -16,11 +16,15 @@ nav.wrapper {
 }
 
 nav ul li {
-  font-size: .91rem;
+  font-size: 0.91rem;
 }
 
-nav ul li a {
-  font-size: .78rem;
+nav .hide-on-med-and-down li:last-child {
+  margin-left: 20px;
+}
+
+nav .hide-on-med-and-down li a {
+  font-size: 1rem;
   margin: 0 8px;
   padding: 0;
 }
@@ -28,10 +32,10 @@ nav ul li a {
 /*  tabs  */
 
 .tabs {
-  font-size: .95rem;
+  font-size: 0.95rem;
   font-weight: normal;
   width: 92% !important;
-  border-color: rgba(163, 151, 151, .3);
+  border-color: rgba(163, 151, 151, 0.3);
   border-bottom: 1px solid #000;
 }
 
@@ -54,9 +58,13 @@ nav ul li a {
 /*  slider  */
 
 .slider {
-  width: 95%;
-  margin: 0 auto;
+  width: 100%;
+  margin: 10px auto;
   padding-bottom: 30px;
+}
+
+.slider .slides li.active {
+  z-index: 1;
 }
 
 /*  form  */
@@ -66,16 +74,25 @@ nav ul li a {
   max-width: 780px;
   margin: 0 auto;
   padding: 0 20px;
+  position: relative;
 }
 
 form {
+  height: 560px;
   margin-top: 53px;
   padding-top: 56px;
   text-align: center;
-  background: url(../styles/img/zamovlenna.jpg) no-repeat -37px -242px;
+  background: url(../img/zamovlenna.jpg) no-repeat -37px -242px;
 }
 
-form input[type=text] {
+form h3 {
+  font-size: 6.5rem;
+  color: #fff;
+}
+
+form input[type=text],
+form input[type=tel],
+form input[type=email] {
   width: 46%;
   margin-bottom: 24px;
   padding-left: 12px;
@@ -90,7 +107,7 @@ form input[type]:focus:not([readonly]) {
 }
 
 form .check-boxes {
-  font-size: .8rem;
+  font-size: 0.8rem;
   width: 48%;
   height: 44px;
   padding-left: 5px;
@@ -98,14 +115,17 @@ form .check-boxes {
   border: 1px solid #fff;
   background-color: #fff;
 }
-[type="checkbox"]+label {
+
+[type="checkbox"] + label {
   padding-left: 22px;
   margin-top: 10px;
+  margin-left: -10px;
+  margin-right: 6px;
 }
 
 label {
   font-size: 1rem;
-  padding-right: .5em;
+  padding-right: 0.5em;
   color: #000;
 }
 
@@ -124,10 +144,10 @@ button {
   color: #fff;
   border: 3px solid #fff;
   background: transparent;
+  transition: all 500ms;
 }
 
 button:hover {
-  transition: all 500ms;
-  color: rgba(255, 0, 0, .35);
+  color: #000;
   background-color: #fff;
 }

@@ -1,38 +1,7 @@
-  'use strict';
+ 'use strict';
 
-;(function() {
-  var $count = $('#counter');
 
-function countUp ( $el, startTime, callback) {
-
-            // Display the starting time on the screen.
-            $el.text(startTime);
-
-            console.log('Starting ...');
-
-            // Start a 1 second timer
-            let timer = setInterval(countItUp,0.5);
-
-            // Decrement the displayed timer value on each 'tick'
-            function countItUp(){
-                startTime += 1
-                $el.text(startTime);
-
-                if( startTime === 17500 ){
-                    console.log('Countdown Finished.');
-
-                    // Stop the timer and do the callback.
-                    clearInterval(timer);
-                    //callback();
-                    return;
-                }
-            }
-
-        }
-countUp($count, 0);
-
-})();
-
+module.exports = function() {
 // slider
 $(document).ready(function() {
      $('.slider').slider({
@@ -149,3 +118,4 @@ $(document).ready(function () {
   $('.arrow-dwn').on("click","a", myScroll);
 
 });
+};

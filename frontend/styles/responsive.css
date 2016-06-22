@@ -1,6 +1,6 @@
 
 @media all and (max-width: 750px) {
-  [type="checkbox"]+label {
+  [type="checkbox"] + label {
     padding-left: 20px;
     margin-top: 10px;
     font-size: 0.71rem;
@@ -11,7 +11,8 @@
   .arrow {
     display: none;
   }
-  [type="checkbox"]+label:before, [type="checkbox"]:not(.filled-in)+label:after {
+  [type="checkbox"] + label::before,
+  [type="checkbox"]:not(.filled-in) + label::after {
     width: 16px;
     height: 16px;
   }
@@ -29,7 +30,7 @@
     width: 80px;
     height: 80px;
   }
-  .about-us .about-info .img-frame:before {
+  .about-us .about-info .img-frame::before {
     top: -40%;
     left: -90%;
   }

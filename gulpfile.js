@@ -8,7 +8,6 @@ const combine = require('stream-combiner2').obj;
 const throttle = require('lodash.throttle');
 const debug = require('gulp-debug');
 const sourcemaps = require('gulp-sourcemaps');
-//const stylus = require('gulp-stylus');
 const browserSync = require('browser-sync').create();
 const gulpIf = require('gulp-if');
 const cssnano = require('gulp-cssnano');
@@ -18,29 +17,16 @@ const plumber = require('gulp-plumber');
 const notify = require('gulp-notify');
 const uglify = require('gulp-uglify');
 const resolver = require('stylus').resolver;
+const AssetsPlugin = require('assets-webpack-plugin');
+const webpack = require('webpack');
+const notifier = require('node-notifier');
 const cssfont64 = require('gulp-cssfont64');
-const imagemin = require('gulp-imagemin');
-
-
-// Gulp + Webpack = ♡
-/*
-const webpackStream = require('webpack-stream');
-const webpack = webpackStream.webpack;
-const named = require('vinyl-named');
-*/
 
 const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
 
-gulp.task('imagemin', () =>
-	gulp.src('frontend/styles/img/*.*')
-		.pipe(imagemin())
-		.pipe(gulp.dest('public/styles/img/'))
-);
-
-
 gulp.task('styles', function() {
 
-  return gulp.src('frontend/styles/*.*')
+  return gulp.src('frontend/styles/*.css')
       .pipe(plumber({
         errorHandler: notify.onError(err => ({
           title:   'Styles',
@@ -53,6 +39,14 @@ gulp.task('styles', function() {
       .pipe(gulp.dest('public/styles'))
       .pipe(gulpIf(!isDevelopment, combine(rev.manifest('css.json'), gulp.dest('manifest'))));
 
+});
+
+gulp.task('fonts', function () {
+
+	return gulp.src('frontend/fonts/*.woff')
+		.pipe(cssfont64())
+		.pipe(gulp.dest('public/styles/fonts'))
+    //.pipe(gulp.dest('backend/public/styles/fonts'));
 
 });
 
@@ -61,57 +55,101 @@ gulp.task('assets', function() {
       .pipe(gulpIf(!isDevelopment, revReplace({
         manifest: gulp.src('manifest/css.json', {allowEmpty: true})
       })))
-      .pipe(gulp.dest('public'));
+      .pipe(gulpIf(!isDevelopment, revReplace({
+        manifest: gulp.src('manifest/webpack.json', {allowEmpty: true})
+      })))
+      .pipe(gulp.dest('public'))
 });
 
 gulp.task('styles:assets', function() {
-  return gulp.src('frontend/styles/**/*.{svg,png,jpg}', {since: gulp.lastRun('styles:assets')})
+  return gulp.src('frontend/assets/img/**/*.{svg,png}', {since: gulp.lastRun('styles:assets')})
       .pipe(gulp.dest('public/styles'));
 });
-/*
-gulp.task('webpack', function() {
+
+gulp.task('webpack', function(callback) {
 
   let options = {
+    entry: './frontend/js/index',
+    output:  {
+      path:     __dirname + '/public/js',
+      publicPath: '/js/',
+      filename: isDevelopment ? 'build.js' : 'build.min.js'
+    },
     watch:   isDevelopment,
     devtool: isDevelopment ? 'cheap-module-inline-source-map' : null,
     module:  {
       loaders: [{
         test:    /\.js$/,
         include: path.join(__dirname, "frontend"),
-        loader:  'babel?presets[]=es2015'
+        loader:  'babel-loader',
       }]
     },
     plugins: [
-      new webpack.NoErrorsPlugin()
+      new webpack.NoErrorsPlugin() // otherwise error still gives a file
     ]
   };
 
-  return gulp.src('frontend/js/*.js')
-      .pipe(plumber({
-        errorHandler: notify.onError(err => ({
-          title:   'Webpack',
-          message: err.message
-        }))
-      }))
-      .pipe(named())
-      .pipe(webpackStream(options))
-      .pipe(gulpIf(!isDevelopment, uglify()))
-      .pipe(gulp.dest('public/js'));
+  if (!isDevelopment) {
+    options.plugins.push(
+        new webpack.optimize.UglifyJsPlugin({
+          compress: {
+            // don't show unreachable variables etc
+            warnings:     false,
+            unsafe:       true
+          }
+        }),
+        new AssetsPlugin({
+          filename: 'webpack.json',
+          path:     __dirname + '/manifest',
+          processOutput(assets) {
+            for (let key in assets) {
+              assets[key + '.js'] = assets[key].js.slice(options.output.publicPath.length);
+              delete assets[key];
+            }
+            return JSON.stringify(assets);
+          }
+        })
+    );
+
+  }
+
+  // https://webpack.github.io/docs/node.js-api.html
+  webpack(options, function(err, stats) {
+    if (!err) { // no hard error
+      // try to get a soft error from stats
+      err = stats.toJson().errors[0];
+    }
+
+    if (err) {
+      notifier.notify({
+        title: 'Webpack',
+        message: err
+      });
+
+      gulplog.error(err);
+    } else {
+      gulplog.info(stats.toString({
+        colors: true
+      }));
+    }
+
+    // task never errs in watch mode, it waits and recompiles
+    if (!options.watch && err) {
+      callback(err);
+    } else {
+      callback();
+    }
+
+  });
+
 
 });
-*/
-gulp.task('fonts', function () {
-	return gulp.src('frontend/fonts/*.woff')
-		.pipe(cssfont64())
-		.pipe(gulp.dest('public/styles/fonts'));
-});
-
 
 gulp.task('clean', function() {
   return del(['public', 'manifest']);
 });
 
-gulp.task('build', gulp.series('clean', gulp.parallel('styles:assets', 'styles'), 'assets', 'fonts', 'imagemin'));
+gulp.task('build', gulp.series('clean', gulp.parallel('styles:assets', 'styles', 'webpack', 'fonts'), 'assets'));
 
 gulp.task('serve', function() {
   browserSync.init({
@@ -130,7 +168,7 @@ gulp.task('dev',
             function() {
               gulp.watch('frontend/styles/**/*.css', gulp.series('styles'));
               gulp.watch('frontend/assets/**/*.*', gulp.series('assets'));
-              gulp.watch('frontend/styles/**/*.{svg,png,jpg}', gulp.series('styles:assets'));
+              gulp.watch('frontend/styles/**/*.{svg,png}', gulp.series('styles:assets'));
             }
         )
     )

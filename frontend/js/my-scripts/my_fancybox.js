@@ -1,5 +1,6 @@
-$(document).ready(function() {
+"use strict";
 
+module.exports = function () {
      $(".open_fancybox").click(function(e) {
 
        if(e.target.id) {
@@ -21,7 +22,7 @@ $(document).ready(function() {
 
          function createImageArr () {
            for(var i = 1;i < 4;i++) {
-             url = 'http://localhost:3000/styles/img/' + id + '/' + i + '.jpg';
+             url = '/img/' + id + '/' + i + '.jpg';
              var image = new Image(url, i);
              images.push(image);
            }
@@ -43,4 +44,4 @@ $(document).ready(function() {
     }
   });
 
-});
+};
